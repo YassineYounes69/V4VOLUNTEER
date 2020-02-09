@@ -55,6 +55,7 @@
       <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XTGVTNB7N7KRqgT7f7eXwlWJqw" />
@@ -62,6 +63,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -71,6 +73,10 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="c dump-autoload" />
+      <command value="s generate:bundle" />
+      <command value="s doctrine:generate:entity" />
+      <command value="s doctrine:database:create" />
+      <command value="s doctrine:schema:update --force " />
     </option>
   </component>
   <component name="RunDashboard">
@@ -95,7 +101,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581062695641</updated>
-      <workItem from="1581063095845" duration="5351000" />
+      <workItem from="1581063095845" duration="5954000" />
+      <workItem from="1581160910503" duration="605000" />
+      <workItem from="1581206770667" duration="4606000" />
+      <workItem from="1581245287191" duration="5464000" />
+      <workItem from="1581251803640" duration="617000" />
     </task>
     <servers />
   </component>
