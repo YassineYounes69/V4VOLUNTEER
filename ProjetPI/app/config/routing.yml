@@ -1,0 +1,51 @@
+project:
+    resource: "@ProjectBundle/Resources/config/routing.yml"
+    prefix:   /projet
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+fos_user:
+  resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+project_homepageBack:
+  path:     /back
+  defaults: { _controller: ProjectBundle:Default:index }
+
+project_homepageFront:
+  path:     /front
+  defaults: { _controller: ProjectBundle:Default:indexFront }
+
+project_Temp:
+  path:     /Temp
+  defaults: { _controller: ProjectBundle:Default:Temp }
+
+project_AjouterRef:
+  path:     /AjouterRef
+  defaults: { _controller: ProjectBundle:Default:AjouterRef }
+
+project_AfficherRef:
+  path:     /AfficherRef
+  defaults: { _controller: ProjectBundle:Default:AfficherRef }
+
+project_ModifierRef:
+  path:     /ModifierRef/{idref}
+  defaults: { _controller: ProjectBundle:Default:ModifierRef }
+project_SupprimerRef:
+  path:     /SupprimerRef/{idref}
+  defaults: { _controller:  ProjectBundle:Default:SupprimerRef }
+
+project_AjouterLog:
+  path:     /AjouterLog
+  defaults: { _controller:  ProjectBundle:logRef:AjouterLog }
+
+project_AfficherLog:
+  path:     /AfficherLog
+  defaults: { _controller:  ProjectBundle:logRef:AfficherLog }
+
+project_ModifierLog:
+  path:     /ModifierLog/{idlog}
+  defaults: { _controller:  ProjectBundle:logRef:ModifierLog }
+project_SupprimerLog:
+  path:     /SupprimerLog/{idlog}
+  defaults: { _controller:  ProjectBundle:logRef:SupprimerLog }
