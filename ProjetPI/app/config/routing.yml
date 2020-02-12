@@ -1,24 +1,19 @@
-user:
-<<<<<<< HEAD
-    resource: "@UserBundle/Resources/config/routing.yml"
-=======
-    resource: "@UserBundle/Controller/"
+project_aide:
+    resource: "@ProjectBundle/Controller/AideController.php"
     type:     annotation
-    prefix:   /a
 
-opportunity:
-    resource: "@OpportunityBundle/Controller/"
+project_agee:
+    resource: "@ProjectBundle/Controller/AgeeController.php"
     type:     annotation
->>>>>>> dfd40a50d5e94cfc507b4f4a4b8d231355233b8b
-    prefix:   /
+
+project:
+    resource: "@ProjectBundle/Resources/config/routing.yml"
+    prefix:   /t
 
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
-
 fos_user:
-<<<<<<< HEAD
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
-=======
   resource: "@FOSUserBundle/Resources/config/routing/all.xml"
->>>>>>> dfd40a50d5e94cfc507b4f4a4b8d231355233b8b
+
+

@@ -16,13 +16,9 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new AppBundle\AppBundle(),
-<<<<<<< HEAD
-=======
-            new OpportunityBundle\OpportunityBundle(),
->>>>>>> dfd40a50d5e94cfc507b4f4a4b8d231355233b8b
             new FOS\UserBundle\FOSUserBundle(),
-            new UserBundle\UserBundle(),
+            new AppBundle\AppBundle(),
+            new ProjectBundle\ProjectBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
@@ -64,6 +60,4 @@ class AppKernel extends Kernel
         });
         $loader->load($this->getRootDir().'/config/config_'.$this->getEnvironment().'.yml');
     }
-
-
 }

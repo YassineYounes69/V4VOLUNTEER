@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Aide</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ aide.id }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ aide.type }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('aide_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('aide_edit', { 'id': aide.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
