@@ -1,11 +1,3 @@
 project_homepage:
     path:     /
     defaults: { _controller: ProjectBundle:Default:index }
-
-agee_edit:
-    path:     /edit
-    defaults: { _controller: ProjectBundle:Agee:edit }
-
-project_per:
-    path:   /per
-    defaults: { _controller: ProjectBundle:Default:per }

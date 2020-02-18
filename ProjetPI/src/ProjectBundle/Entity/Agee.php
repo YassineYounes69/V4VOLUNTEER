@@ -165,20 +165,9 @@ class Agee
      */
     private $type;
 
-    /**
-     * @param mixed $id_membre
-     */
-    public function setIdMembre($id_membre)
-    {
-        $this->id_membre = $id_membre;
-    }
 
-    /**
-     * @return mixed
-     */
-    public function getIdMembre()
-    {
-        return $this->id_membre;
-    }
+
+
+
 }
 

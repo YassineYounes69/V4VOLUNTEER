@@ -17,6 +17,12 @@ class User extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+
+    /**
+     * @ORM\OneToMany(targetEntity="ProjectBundle\Entity\Donation", mappedBy="userDonation",cascade={"persist","remove"} )
+     */
+    private $demandeUser;
+
     /**
      * @var string
      *
@@ -182,5 +188,25 @@ public function getUsername()
         parent::__construct();
         // your own logic
     }
+
+    /**
+     * @return mixed
+     */
+    public function getDemandeUser()
+    {
+        return $this->demandeUser;
+    }
+
+    /**
+     * @param mixed $demandeUser
+     */
+    public function setDemandeUser($demandeUser)
+    {
+        $this->demandeUser = $demandeUser;
+    }
+
+
+
+
 }
 

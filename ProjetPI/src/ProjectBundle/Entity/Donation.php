@@ -22,7 +22,7 @@ class Donation
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", cascade={"persist","remove"} ,inversedBy="demandeUser", fetch="LAZY" )
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", cascade={"persist"} ,inversedBy="demandeUser", fetch="LAZY" )
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id",nullable=true)
      */
     private $userDonation;
@@ -54,6 +54,18 @@ class Donation
      * @ORM\Column(name="quantite_donation", type="integer")
      */
     private $quantiteDonation;
+
+    /**
+     * Donation constructor.
+     * @param $demandeDonation
+     */
+    public function __construct($demandeDonation,$userDonation,$etatDonation,$typeDonation)
+    {
+        $this->demandeDonation = $demandeDonation;
+        $this->userDonation = $userDonation;
+        $this->etatDonation = $etatDonation;
+        $this->typeDonation = $typeDonation;
+    }
 
 
     /**
@@ -146,6 +158,9 @@ class Donation
         $this->demandeDonation = $demandeDonation;
     }
 
+
+
+
     /**
      * @return enum
      */
@@ -161,6 +176,7 @@ class Donation
     {
         $this->typeDonation = $typeDonation;
     }
+
 
 
 }

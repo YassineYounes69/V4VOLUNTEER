@@ -38,7 +38,7 @@ class Aide
     /**
      * @var string
      *
-     * @ORM\Column(name="id_Aide", type="string", length=255)
+     * @ORM\Column(name="id_AXide", type="string", length=255)
      */
     private $id_Aide;
 
@@ -75,46 +75,5 @@ class Aide
     {
         return $this->type;
     }
-
-    /**
-     * @param string $id_Aide
-     */
-    public function setIdAide($id_Aide)
-    {
-        $this->id_Aide = $id_Aide;
-    }
-
-    /**
-     * @param \AppBundle\Entity\User $id_user
-     */
-    public function setIdUser($id_user)
-    {
-        $this->id_user = $id_user;
-    }
-
-    /**
-     * @param int $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return \AppBundle\Entity\User
-     */
-    public function getIdUser()
-    {
-        return $this->id_user;
-    }
-
-    /**
-     * @return string
-     */
-    public function getIdAide()
-    {
-        return $this->id_Aide;
-    }
-
 }
 
