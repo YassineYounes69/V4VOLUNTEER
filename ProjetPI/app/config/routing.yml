@@ -1,18 +1,9 @@
-project_donation:
-    resource: "@ProjectBundle/Controller/DonationController.php"
-    type:     annotation
-
-project_demande:
-    resource: "@ProjectBundle/Controller/DemandeController.php"
-    type:     annotation
-
 project:
     resource: "@ProjectBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /projet
 
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
 fos_user:
   resource: "@FOSUserBundle/Resources/config/routing/all.xml"
-

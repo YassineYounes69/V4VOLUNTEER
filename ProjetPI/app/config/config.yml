@@ -47,10 +47,9 @@ doctrine:
         dbname: '%database_name%'
         user: '%database_user%'
         password: '%database_password%'
-        server_version: '5.7.24'
         charset: UTF8
         mapping_types:
-            enum: string
+          enum: string
         # if using pdo_sqlite as your database driver:
         #   1. add the path in parameters.yml
         #     e.g. database_path: '%kernel.project_dir%/var/data/data.sqlite'
@@ -84,18 +83,3 @@ fos_user:
   from_email:
     address: "badiaa.bouhdid@esprit.tn"
     sender_name: "badi3a"
-
-knp_snappy:
-    pdf:
-        enabled:    true
-        binary:     C:/wkhtmltopdf/wkhtmltopdf.exe #"\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe\"" for Windows users
-        options:
-            no-outline: true
-            page-size: LETTER
-            # Recommended to set UTF-8 as default encoding :)
-            encoding: UTF-8
-
-    image:
-        enabled:    true
-        binary:     C:/wkhtmltopdf/wkhtmltopdf.exe #"\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltoimage.exe\"" for Windows users
-        options:    []

@@ -1,0 +1,45 @@
+{% extends 'EspaceAdmin.html.twig' %}
+
+{% block content %}
+
+    <div class="clearfix"></div>
+    <div class="banner two">
+        <h2>Demandes</h2>
+    </div>
+
+
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Type</th>
+            <th>Etat</th>
+            <th>Titre</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for demande in demandes %}
+            <tr>
+                <td><a href="{{ path('demande_show', { 'id': demande.id }) }}">{{ demande.id }}</a></td>
+                <td>{{ demande.typeDemande }}</td>
+                <td>{{ demande.etatDemande }}</td>
+                <td>{{ demande.titreDemande }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('demande_show', { 'id': demande.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('demande_edit', { 'id': demande.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

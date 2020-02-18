@@ -56,14 +56,13 @@
       <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
-      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
-      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XTGVTNB7N7KRqgT7f7eXwlWJqw" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -71,30 +70,31 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ProjetPI\src\ProjectBundle\Resources\views\Default" />
-      <recent name="C:\wamp64\www\ProjetPI\app\Resources\views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ProjetPI\web\images" />
-      <recent name="C:\wamp64\www\ProjetPI\app\Resources\views\demandeback" />
       <recent name="C:\wamp64\www\ProjetPI\web" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ProjetPI\app\Resources\views" />
     </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="s doctrine:schema:create" />
       <command value="c dump-autoload" />
-      <command value="s server:run" />
+      <command value="s debug:router" />
+      <command value="s doctrine:database:create" />
       <command value="s generate:bundle" />
       <command value="s doctrine:generate:entity" />
-      <command value="s doctrine:database:create" />
-      <command value="s doctrine:generate:crud" />
-      <command value="s debug:router" />
+      <command value="s doctrine:generate:form Evenement" />
+      <command value="s doctrine:generate:form ProjectBundle:Evenement" />
+      <command value="s generate:controller" />
       <command value="s doctrine:schema:update --force" />
+      <command value="s doctrine:generate:form ProjectBundle:Reservation" />
+      <command value="s server:run" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -137,18 +137,9 @@
       <workItem from="1581320339874" duration="7985000" />
       <workItem from="1581339035177" duration="16774000" />
       <workItem from="1581357856348" duration="1309000" />
-      <workItem from="1581366782840" duration="3524000" />
-      <workItem from="1581409845347" duration="1214000" />
-      <workItem from="1581415656625" duration="858000" />
-      <workItem from="1581416558347" duration="148000" />
-      <workItem from="1581426906191" duration="1371000" />
-      <workItem from="1581464745792" duration="7421000" />
-      <workItem from="1581488752175" duration="16536000" />
-      <workItem from="1581520845738" duration="15691000" />
-      <workItem from="1581574782633" duration="14152000" />
-      <workItem from="1581628144316" duration="14893000" />
-      <workItem from="1581676681982" duration="12602000" />
-      <workItem from="1581704885553" duration="9775000" />
+      <workItem from="1581604125956" duration="16435000" />
+      <workItem from="1581703305402" duration="41278000" />
+      <workItem from="1581965298969" duration="15310000" />
     </task>
     <servers />
   </component>
