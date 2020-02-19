@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+
+
+{{ form(form) }}
+
+
+    <script type="text/javascript" >
+        $(document).ready(function () {
+
+            $("#projectbundle_logement_Ajouter").click(function () {
+
+                if ($('#nomlog').val().length == "") {
+
+                    // si la chaîne de caractères est inférieure à 5
+                    swal({
+                        title: "Champ nom vide! ",
+                        text: "Veuiller remplir le champ du nom s'il vous plait",
+                        icon: "error",
+                        button: "ok",
+                    });
+
+                    $('#projectbundle_logement_nomLog').css({ // on rend le champ rouge
+                        borderColor: 'red',
+                        color: 'red'
+
+                    });
+
+                } else {
+
+                    if ($('#projectbundle_logement_nomLog').val().length > 10 || $('#projectbundle_logement_nomLog').val().length < 3) {
+
+                        // si la chaîne de caractères est inférieure à 5
+                        swal({
+                            title: "Champs vide! ",
+                            text: "Veuillez saisir un nom de catégorie  avec au moins 3 caractères et au plus 10 caractères",
+                            icon: "warning",
+                            button: "ok",
+                        });
+
+                        $('#projectbundle_logement_nomLog').css({ // on rend le champ rouge
+                            borderColor: 'orange',
+                            color: 'orange'
+
+                        });
+
+                    }
+
+                    else {
+
+                        swal({
+                            title: " Remplissage complet  :)  ",
+                            text: "  Remplissage des champs avec succés ",
+                            icon: "success",
+                            button: "ok",
+                        });
+                        $('#projectbundle_logement_nomLog').css({ // on rend le champ rouge
+                            borderColor: 'green',
+                            color: 'green'
+
+                        });
+                    }
+
+
+
+                }
+
+            });
+
+        });
+    </script>
+{% endblock %}

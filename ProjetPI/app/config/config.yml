@@ -2,11 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
-<<<<<<< HEAD
-=======
-    - { resource: "@OpportunityBundle/Resources/config/services.yml" }
->>>>>>> dfd40a50d5e94cfc507b4f4a4b8d231355233b8b
-    - { resource: "@UserBundle/Resources/config/services.yml" }
+    - { resource: "@ProjectBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -51,6 +47,8 @@ doctrine:
         user: '%database_user%'
         password: '%database_password%'
         charset: UTF8
+        mapping_types:
+            enum: string
         # if using pdo_sqlite as your database driver:
         #   1. add the path in parameters.yml
         #     e.g. database_path: '%kernel.project_dir%/var/data/data.sqlite'
@@ -74,26 +72,15 @@ swiftmailer:
 sensio_framework_extra:
    router:
         annotations: false
-
-<<<<<<< HEAD
-
+#fosuser
 fos_user:
-    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
-    firewall_name: main
-    user_class: UserBundle\Entity\User
-    service:
-        mailer: fos_user.mailer.twig_swift
-    from_email:
-        address: "ayoub.sassi@esprit.tn"
-        sender_name: "ayoub"
-=======
-fos_user:
-    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
-    firewall_name: main
-    user_class: AppBundle\Entity\User
-    service:
-        mailer: fos_user.mailer.twig_swift
-    from_email:
-        address: "badiaa.bouhdid@esprit.tn"
-        sender_name: "badi3a"
->>>>>>> dfd40a50d5e94cfc507b4f4a4b8d231355233b8b
+  db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+  firewall_name: main
+  user_class: AppBundle\Entity\User
+  service:
+    mailer: fos_user.mailer.twig_swift
+  from_email:
+    address: "badiaa.bouhdid@esprit.tn"
+    sender_name: "badi3a"
+gregwar_captcha: ~
+

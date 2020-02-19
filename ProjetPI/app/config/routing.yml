@@ -1,24 +1,57 @@
-user:
-<<<<<<< HEAD
-    resource: "@UserBundle/Resources/config/routing.yml"
-=======
-    resource: "@UserBundle/Controller/"
-    type:     annotation
-    prefix:   /a
-
-opportunity:
-    resource: "@OpportunityBundle/Controller/"
-    type:     annotation
->>>>>>> dfd40a50d5e94cfc507b4f4a4b8d231355233b8b
-    prefix:   /
+project:
+    resource: "@ProjectBundle/Resources/config/routing.yml"
+    prefix:   /projet
 
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
-
 fos_user:
-<<<<<<< HEAD
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
-=======
   resource: "@FOSUserBundle/Resources/config/routing/all.xml"
->>>>>>> dfd40a50d5e94cfc507b4f4a4b8d231355233b8b
+
+project_homepageBack:
+  path:     /back
+  defaults: { _controller: ProjectBundle:Default:index }
+
+project_homepageFront:
+  path:     /front
+  defaults: { _controller: ProjectBundle:Default:indexFront }
+
+project_Temp:
+  path:     /Temp
+  defaults: { _controller: ProjectBundle:Default:Temp }
+
+project_AjouterRef:
+  path:     /AjouterRef
+  defaults: { _controller: ProjectBundle:Default:AjouterRef }
+
+project_AfficherRef:
+  path:     /AfficherRef
+  defaults: { _controller: ProjectBundle:Default:AfficherRef }
+
+project_ModifierRef:
+  path:     /ModifierRef/{idref}
+  defaults: { _controller: ProjectBundle:Default:ModifierRef }
+
+project_SupprimerRef:
+  path:     /SupprimerRef/{idref}
+  defaults: { _controller:  ProjectBundle:Default:SupprimerRef }
+
+project_AjouterLog:
+  path:     /AjouterLog
+  defaults: { _controller:  ProjectBundle:logRef:AjouterLog }
+
+project_AfficherLog:
+  path:     /AfficherLog
+  defaults: { _controller:  ProjectBundle:logRef:AfficherLog }
+
+project_ModifierLog:
+  path:     /ModifierLog/{idlog}
+  defaults: { _controller:  ProjectBundle:logRef:ModifierLog }
+
+project_SupprimerLog:
+  path:     /SupprimerLog/{idlog}
+  defaults: { _controller:  ProjectBundle:logRef:SupprimerLog }
+
+project_payer:
+  path:    /payer
+  defaults: { _controller: ProjectBundle:logRef:payer }

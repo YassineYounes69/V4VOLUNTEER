@@ -1,0 +1,14 @@
+project_homepageBack:
+    path:     /back
+    defaults: { _controller: ProjectBundle:Default:index }
+
+project_homepageFront:
+    path:     /front
+    defaults: { _controller: ProjectBundle:Default:indexFront }
+
+project_AjouterRef:
+    path:     /AjouterRef
+    defaults: { _controller: ProjectBundle:Default:AjouterRef }
+
+
+
