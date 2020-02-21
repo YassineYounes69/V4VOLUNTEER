@@ -1,4 +1,0 @@
-
-club_homepage:
-    path:     /
-    defaults: { _controller: ClubBundle:Club:home }

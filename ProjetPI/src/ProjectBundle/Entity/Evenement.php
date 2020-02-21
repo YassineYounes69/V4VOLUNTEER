@@ -102,7 +102,11 @@ class Evenement
 
     public function __toString()
     {
+<<<<<<< HEAD
         return $this->description ;
+=======
+return $this->description ;
+>>>>>>> de496a788e2b14d8a651b75af972c22c59fe7911
     }
 
     /**

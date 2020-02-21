@@ -19,8 +19,12 @@
         "doctrine/orm": "^2.5",
         "friendsofsymfony/user-bundle": "~2.0",
         "incenteev/composer-parameter-handler": "^2.0",
+<<<<<<< HEAD
         "knplabs/knp-paginator-bundle": "^3.0",
         "knplabs/knp-snappy-bundle": "^1.5",
+=======
+        "phpmailer/phpmailer": "^6.1",
+>>>>>>> de496a788e2b14d8a651b75af972c22c59fe7911
         "sensio/distribution-bundle": "^5.0.19",
         "sensio/framework-extra-bundle": "^5.0.0",
         "symfony/monolog-bundle": "^3.1.0",

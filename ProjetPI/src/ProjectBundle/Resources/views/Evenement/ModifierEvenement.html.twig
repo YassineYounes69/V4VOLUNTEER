@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html.twig' %}
 
 {% block content %}
@@ -156,3 +157,49 @@
     </script>
 
 {% endblock %}
+=======
+<h1> Modifier un evenement </h1>
+
+{{ form_start(f) }}
+<table>
+    <tr>
+        <td>Nom:</td>
+        <td>{{ form_widget(f.nom) }}</td>
+
+    </tr>
+    <tr>
+        <td>Description:</td>
+        <td>{{ form_widget(f.description) }}</td>
+
+    </tr>
+    <tr>
+        <td>Date:</td>
+        <td>{{ form_widget(f.date) }}</td>
+
+    </tr>
+    <tr>
+        <td>Capacité:</td>
+        <td>{{ form_widget(f.capacite) }}</td>
+    </tr>
+    <tr>
+        <td>Prix:</td>
+        <td>{{ form_widget(f.prix) }}</td>
+    </tr>
+    <tr>
+        <td>Nombre des participants :</td>
+        <td>{{ form_widget(f.nbParticipant) }}</td>
+    </tr>
+    <tr>
+        <td>Lieu:</td>
+        <td>{{ form_widget(f.lieu) }}</td>
+    </tr>
+    <tr>
+        <button type="submit" class="btn btn-default">Modifier</button>
+
+    </tr>
+</table>
+{{ form_end(f) }}
+<br/>
+
+
+>>>>>>> de496a788e2b14d8a651b75af972c22c59fe7911

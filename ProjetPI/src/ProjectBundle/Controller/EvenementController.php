@@ -8,15 +8,22 @@ use AppBundle\Entity\User;
 use ProjectBundle\Entity\Reservation;
 use ProjectBundle\Form\EvenementType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+<<<<<<< HEAD
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\Response;
+=======
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\File\File;
+>>>>>>> de496a788e2b14d8a651b75af972c22c59fe7911
 
 
 class EvenementController extends Controller
 {
+<<<<<<< HEAD
     public function afficherEvenementsAction()
     {
         $idUser = $this->getUser();
@@ -47,6 +54,16 @@ class EvenementController extends Controller
             }
         }
     }
+=======
+    public function afficherEvenementsAction(){
+        $evenement=$this->getDoctrine()
+            ->getRepository(Evenement::class)
+            ->findAll();
+        return $this->render('@Project/Evenement/AfficherListe.html.twig',
+            array('evenement'=>$evenement));
+    }
+
+>>>>>>> de496a788e2b14d8a651b75af972c22c59fe7911
     public function ajouterEvenementAction(Request $request)
     {
         $evenement = new Evenement();
@@ -64,7 +81,10 @@ class EvenementController extends Controller
             // $file->move($this->getParameter('photos_directory'), $filename);
             // $evenement->setPhotoEvenement($filename);
             $evenement->setNbParticipant(0);
+<<<<<<< HEAD
 
+=======
+>>>>>>> de496a788e2b14d8a651b75af972c22c59fe7911
             $evenement = $Form->getData();
             $evenement->setCreateur($user->getUsername());
             $evenement->setIdMembre($user);
@@ -72,7 +92,11 @@ class EvenementController extends Controller
 
             $em->persist($evenement);
             $em->flush();
+<<<<<<< HEAD
             return $this->redirectToRoute('afficherListe');
+=======
+            return $this->redirectToRoute('afficherEvenement');
+>>>>>>> de496a788e2b14d8a651b75af972c22c59fe7911
         }
         return $this->render('@Project/Evenement/AjouterEvenement.html.twig',
             array('f'=>$Form->createView()));
@@ -88,7 +112,11 @@ class EvenementController extends Controller
         {
             $em->persist($evenement);
             $em->flush();
+<<<<<<< HEAD
             return $this->redirectToRoute('afficherListe');
+=======
+            return $this->redirectToRoute('afficherEvenement');
+>>>>>>> de496a788e2b14d8a651b75af972c22c59fe7911
         }
 
         return $this->render('@Project/Evenement/ModifierEvenement.html.twig',array('f'=>$form->createView()));
@@ -99,17 +127,29 @@ class EvenementController extends Controller
         $em = $this->getDoctrine()->getManager();
         $em->remove($evenement);
         $em->flush();
+<<<<<<< HEAD
         return $this->redirectToRoute('afficherListe');
+=======
+        return $this->redirectToRoute('afficherEvenement');
+>>>>>>> de496a788e2b14d8a651b75af972c22c59fe7911
 
     }
     public function afficherEvenementAction(Evenement $evenement)
     {
+<<<<<<< HEAD
         $idUser=$this->getUser();
+=======
+        $id_user=$this->getUser();
+>>>>>>> de496a788e2b14d8a651b75af972c22c59fe7911
 
 
 
         $em1 = $this->getDoctrine()->getManager();
+<<<<<<< HEAD
         $reservation=$em1->getRepository(Reservation::class)->findBy(array("idUser"=>$idUser));
+=======
+        $reservation=$em1->getRepository(Reservation::class)->findBy(array("id_user"=>$id_user));
+>>>>>>> de496a788e2b14d8a651b75af972c22c59fe7911
 
 
 
@@ -120,6 +160,7 @@ class EvenementController extends Controller
             'reservation'=>$reservation,
         ));
     }
+<<<<<<< HEAD
     public function searchAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -139,6 +180,9 @@ class EvenementController extends Controller
         }
         return $realEntities;
     }
+=======
+
+>>>>>>> de496a788e2b14d8a651b75af972c22c59fe7911
 
 }
 

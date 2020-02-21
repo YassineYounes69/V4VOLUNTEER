@@ -1,0 +1,23 @@
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Type</th>
+        <th>Etat</th>
+        <th>Titre</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for demande in demandes %}
+        <tr>
+            <td>{{ demande.id }}</td>
+            <td>{{ demande.typeDemande }}</td>
+            <td>{{ demande.etatDemande }}</td>
+            <td>{{ demande.titreDemande }}</td>
+            <td>{{ demande.descriptionDemande }}</td>
+
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

@@ -56,16 +56,24 @@
       <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+<<<<<<< HEAD
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+=======
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
+>>>>>>> de496a788e2b14d8a651b75af972c22c59fe7911
     </include_path>
   </component>
   <component name="ProjectId" id="1XTGVTNB7N7KRqgT7f7eXwlWJqw" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/ProjectBundle/Tests/Controller" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
+>>>>>>> de496a788e2b14d8a651b75af972c22c59fe7911
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -73,24 +81,29 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ProjetPI\src\ProjectBundle\Resources\views\Default" />
-      <recent name="C:\wamp64\www\ProjetPI\app\Resources\views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+<<<<<<< HEAD
       <recent name="C:\wamp64\www\ProjetPI\src\ProjectBundle\Tests\Controller" />
       <recent name="C:\wamp64\www\ProjetPI\src\ProjectBundle\Resources\views" />
       <recent name="C:\wamp64\www\ProjetPI\src\ProjectBundle\Form" />
       <recent name="C:\wamp64\www\ProjetPI\src\ProjectBundle\Controller" />
       <recent name="C:\wamp64\www\ProjetPI\web\js" />
+=======
+      <recent name="C:\wamp64\www\ProjetPI\web" />
+>>>>>>> de496a788e2b14d8a651b75af972c22c59fe7911
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ProjetPI\app\Resources\views" />
     </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="s doctrine:schema:create" />
+<<<<<<< HEAD
       <command value="s server:run" />
       <command value="s generate:bundle" />
       <command value="s doctrine:generate:entity" />
@@ -99,6 +112,19 @@
       <command value="c dump-autoload" />
       <command value="s doctrine:schema:update --force" />
       <command value="s debug:router" />
+=======
+      <command value="c dump-autoload" />
+      <command value="s debug:router" />
+      <command value="s doctrine:database:create" />
+      <command value="s generate:bundle" />
+      <command value="s doctrine:generate:entity" />
+      <command value="s doctrine:generate:form Evenement" />
+      <command value="s doctrine:generate:form ProjectBundle:Evenement" />
+      <command value="s generate:controller" />
+      <command value="s doctrine:schema:update --force" />
+      <command value="s doctrine:generate:form ProjectBundle:Reservation" />
+      <command value="s server:run" />
+>>>>>>> de496a788e2b14d8a651b75af972c22c59fe7911
     </option>
   </component>
   <component name="RunDashboard">
@@ -141,6 +167,7 @@
       <workItem from="1581320339874" duration="7985000" />
       <workItem from="1581339035177" duration="16774000" />
       <workItem from="1581357856348" duration="1309000" />
+<<<<<<< HEAD
       <workItem from="1581366782840" duration="3524000" />
       <workItem from="1581409845347" duration="1214000" />
       <workItem from="1581415656625" duration="858000" />
@@ -167,6 +194,11 @@
       <workItem from="1582238482962" duration="8233000" />
       <workItem from="1582280699539" duration="3278000" />
       <workItem from="1582291809094" duration="683000" />
+=======
+      <workItem from="1581604125956" duration="16435000" />
+      <workItem from="1581703305402" duration="41278000" />
+      <workItem from="1581965298969" duration="15310000" />
+>>>>>>> de496a788e2b14d8a651b75af972c22c59fe7911
     </task>
     <servers />
   </component>
