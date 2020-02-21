@@ -14,10 +14,11 @@
     <div class="container">
         <div class="col-md-8 donate-right">
             <div class="donate-top">
-    {{ form_start(form) }}
+    {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
         {{ form_widget(form) }}
+                {{ form_errors (form) }}
                 <br>
-        <input type="submit" value="Create" />
+        <input type="submit" value="Faire un don" />
     {{ form_end(form) }}
                 <br>
                 <br>

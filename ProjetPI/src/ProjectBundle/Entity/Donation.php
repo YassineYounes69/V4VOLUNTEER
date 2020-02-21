@@ -3,6 +3,8 @@
 namespace ProjectBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * Donation
@@ -52,6 +54,9 @@ class Donation
      * @var int
      *
      * @ORM\Column(name="quantite_donation", type="integer")
+     * @Assert\GreaterThan(value=0, message="La quantité doit etre superieure à 0")
+     * @Assert\LessThan(value=300, message="La quantité doit etre inferieure à 300")
+     * @Assert\NotBlank(message="La quantité est obligatoire")
      */
     private $quantiteDonation;
 

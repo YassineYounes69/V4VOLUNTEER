@@ -58,12 +58,14 @@
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XTGVTNB7N7KRqgT7f7eXwlWJqw" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/ProjectBundle/Tests/Controller" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -79,22 +81,24 @@
       <recent name="C:\wamp64\www\ProjetPI\app\Resources\views" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ProjetPI\web\images" />
-      <recent name="C:\wamp64\www\ProjetPI\app\Resources\views\demandeback" />
-      <recent name="C:\wamp64\www\ProjetPI\web" />
+      <recent name="C:\wamp64\www\ProjetPI\src\ProjectBundle\Tests\Controller" />
+      <recent name="C:\wamp64\www\ProjetPI\src\ProjectBundle\Resources\views" />
+      <recent name="C:\wamp64\www\ProjetPI\src\ProjectBundle\Form" />
+      <recent name="C:\wamp64\www\ProjetPI\src\ProjectBundle\Controller" />
+      <recent name="C:\wamp64\www\ProjetPI\web\js" />
     </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="s doctrine:schema:create" />
-      <command value="c dump-autoload" />
       <command value="s server:run" />
       <command value="s generate:bundle" />
       <command value="s doctrine:generate:entity" />
       <command value="s doctrine:database:create" />
       <command value="s doctrine:generate:crud" />
-      <command value="s debug:router" />
+      <command value="c dump-autoload" />
       <command value="s doctrine:schema:update --force" />
+      <command value="s debug:router" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -149,6 +153,20 @@
       <workItem from="1581628144316" duration="14893000" />
       <workItem from="1581676681982" duration="12602000" />
       <workItem from="1581704885553" duration="9775000" />
+      <workItem from="1581866346263" duration="1741000" />
+      <workItem from="1581973602127" duration="8168000" />
+      <workItem from="1581986492627" duration="3699000" />
+      <workItem from="1582007223076" duration="17694000" />
+      <workItem from="1582027329671" duration="16000" />
+      <workItem from="1582027885071" duration="542000" />
+      <workItem from="1582045649374" duration="7627000" />
+      <workItem from="1582054569561" duration="5802000" />
+      <workItem from="1582099341044" duration="649000" />
+      <workItem from="1582179101748" duration="9213000" />
+      <workItem from="1582197052795" duration="390000" />
+      <workItem from="1582238482962" duration="8233000" />
+      <workItem from="1582280699539" duration="3278000" />
+      <workItem from="1582291809094" duration="683000" />
     </task>
     <servers />
   </component>

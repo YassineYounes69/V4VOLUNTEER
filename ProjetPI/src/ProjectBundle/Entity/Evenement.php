@@ -3,6 +3,7 @@
 namespace ProjectBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Evenement
@@ -31,7 +32,7 @@ class Evenement
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length=255)
+     * @ORM\Column(name="description", type="text", length=1000, nullable=false)
      */
     private $description;
 
@@ -53,49 +54,94 @@ class Evenement
      * @var float
      *
      * @ORM\Column(name="prix", type="float")
+     * @Assert\Type(type="float", message = "Le minimum de prix est 20 dt ")
+     * @Assert\Range(
+     *      min = 10,
+     *      minMessage = "Le prix doit au moins être égal à 20"
+     *      )
      */
     private $prix;
 
     /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="heureDebut", type="time")
-     */
-    private $heureDebut;
-
-    /**
      * @var int
      *
-     * @ORM\Column(name="duree", type="integer")
+     * @ORM\Column(name="nbParticipant", type="integer")
      */
-    private $duree;
+    private $nbParticipant;
+
     /**
      * @var string
      *
-     * @ORM\Column(name="image", type="string", length=255, nullable=true)
+     * @ORM\Column(name="lieu", type="string", length=255)
      */
-    private $image;
+    private $lieu;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="createur", type="string", length=255)
+     */
+    private $createur;
 
     /**
      * @return string
      */
-    public function getImage()
+    public function getCreateur()
     {
-        return $this->image;
+        return $this->createur;
     }
 
     /**
-     * @param string $image
+     * @param string $createur
      */
-    public function setImage($image)
+    public function setCreateur($createur)
     {
-        $this->image = $image;
+        $this->createur = $createur;
     }
+
+
+
+    public function __toString()
+    {
+        return $this->description ;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLieu()
+    {
+        return $this->lieu;
+    }
+
+    /**
+     * @return int
+     */
+    public function getNbParticipant()
+    {
+        return $this->nbParticipant;
+    }
+
+    /**
+     * @param string $lieu
+     */
+    public function setLieu($lieu)
+    {
+        $this->lieu = $lieu;
+    }
+
+    /**
+     * @param int $nbParticipant
+     */
+    public function setNbParticipant($nbParticipant)
+    {
+        $this->nbParticipant = $nbParticipant;
+    }
+
     /**
      *
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_membre", referencedColumnName="id", nullable=true)
+     *  @ORM\JoinColumn(name="id_membre", referencedColumnName="id", nullable=true)
      * })
      */
     private $id_membre;
@@ -157,28 +203,21 @@ class Evenement
     }
 
     /**
-     * Set description
-     *
      * @param string $description
-     *
-     * @return Evenement
      */
     public function setDescription($description)
     {
         $this->description = $description;
-
-        return $this;
     }
 
     /**
-     * Get description
-     *
      * @return string
      */
     public function getDescription()
     {
         return $this->description;
     }
+
 
     /**
      * Set date
@@ -252,52 +291,9 @@ class Evenement
         return $this->prix;
     }
 
-    /**
-     * Set heureDebut
-     *
-     * @param \DateTime $heureDebut
-     *
-     * @return Evenement
-     */
-    public function setHeureDebut($heureDebut)
-    {
-        $this->heureDebut = $heureDebut;
 
-        return $this;
-    }
 
-    /**
-     * Get heureDebut
-     *
-     * @return \DateTime
-     */
-    public function getHeureDebut()
-    {
-        return $this->heureDebut;
-    }
 
-    /**
-     * Set duree
-     *
-     * @param integer $duree
-     *
-     * @return Evenement
-     */
-    public function setDuree($duree)
-    {
-        $this->duree = $duree;
 
-        return $this;
-    }
-
-    /**
-     * Get duree
-     *
-     * @return int
-     */
-    public function getDuree()
-    {
-        return $this->duree;
-    }
 }
 

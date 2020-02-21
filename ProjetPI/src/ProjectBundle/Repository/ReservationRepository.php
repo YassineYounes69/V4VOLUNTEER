@@ -1,7 +1,7 @@
 <?php
 
 namespace ProjectBundle\Repository;
-
+use Doctrine\ORM\EntityRepository;
 /**
  * ReservationRepository
  *
@@ -10,4 +10,16 @@ namespace ProjectBundle\Repository;
  */
 class ReservationRepository extends \Doctrine\ORM\EntityRepository
 {
+    public  function findparticipation($idUser)
+    {
+        $query= $this->getEntityManager()
+            ->createQuery("select m from ProjectBundle:Reservation m WHERE m.idUser=:idUser ")
+            ->setParameter('idUser',$idUser)
+
+        ;
+
+        return $query->getResult();
+    }
+
+
 }

@@ -7,6 +7,7 @@ use ProjectBundle\Entity\Demande;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Donation controller.
@@ -113,7 +114,7 @@ class DonationController extends Controller
     /**
      * Finds and displays a donation entity.
      *
-     * @Route("/{id}", name="donation_show")
+     * @Route("/show/{id}", name="donation_show")
      * @Method("GET")
      */
     public function showAction(Donation $donation)
@@ -151,6 +152,51 @@ class DonationController extends Controller
         ));
     }
 
+
+
+
+
+
+
+    /**
+     * Lists all donation entities.
+     *
+     * @Route("/pdf", name="liste_donation_pdf")
+     */
+    public function pdfAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $donations = $em->getRepository('ProjectBundle:Donation')->findAll();
+        $snappy = $this->get('knp_snappy.pdf');
+
+        $html = $this->renderView('donation/pdf.html.twig', array(
+            //..Send some data to your view if you need to //
+            'donations' => $donations,
+        ));
+
+        $filename = 'myFirstSnappyPDF';
+
+        return new Response(
+            $snappy->getOutputFromHtml($html),
+            200,
+            array(
+                'Content-Type'          => 'application/pdf',
+                'Content-Disposition'   => 'inline; filename="'.$filename.'.pdf"'
+            )
+        );
+    }
+
+
+
+
+
+
+
+
+
+
+
     /**
      * Deletes a donation entity.
      *
@@ -165,7 +211,7 @@ class DonationController extends Controller
             $em->flush();
 
 
-        return $this->redirectToRoute('donation_index');
+        return $this->redirectToRoute('donation_back_index');
     }
 
     /**

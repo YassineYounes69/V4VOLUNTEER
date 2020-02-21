@@ -6,34 +6,34 @@
     <div class="banner two">
         <h2>Demandes</h2>
     </div>
+    <span class="button"><a class="read trd" href="{{ path('liste_demande_pdf') }}">  📇 imprimer la liste</a></span>
+<br>
+    <br>
+    <script src="{{ asset('js/sorttable.js') }}"></script>
 
 
-
-    <table class="table table-bordered">
+    <table id="dtBasicExample" class="sortable" cellspacing="0" border="1" width="100%">
         <thead>
         <tr>
-            <th>Id</th>
-            <th>Type</th>
-            <th>Etat</th>
-            <th>Titre</th>
-            <th>Actions</th>
+            <th class="text-center">Id</th>
+            <th class="text-center">Type</th>
+            <th class="text-center">Etat</th>
+            <th class="text-center">Titre</th>
+            <th class="text-center">Supprimer</th>
         </tr>
         </thead>
         <tbody>
         {% for demande in demandes %}
             <tr>
-                <td><a href="{{ path('demande_show', { 'id': demande.id }) }}">{{ demande.id }}</a></td>
-                <td>{{ demande.typeDemande }}</td>
-                <td>{{ demande.etatDemande }}</td>
-                <td>{{ demande.titreDemande }}</td>
-                <td>
+                <td align ="center"><a href="{{ path('demande_show', { 'id': demande.id }) }}">{{ demande.id }}</a></td>
+                <td align ="center">{{ demande.typeDemande }}</td>
+                <td align ="center">{{ demande.etatDemande }}</td>
+                <td align ="center">{{ demande.titreDemande }}</td>
+                <td align ="center">
                     <ul>
-                        <li>
-                            <a href="{{ path('demande_show', { 'id': demande.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('demande_edit', { 'id': demande.id }) }}">edit</a>
-                        </li>
+                            <a href="{{ path('demande_delete', { 'id': demande.id }) }}">❌</a>
+
+
                     </ul>
                 </td>
             </tr>

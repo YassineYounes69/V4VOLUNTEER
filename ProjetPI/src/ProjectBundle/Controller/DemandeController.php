@@ -3,6 +3,7 @@
 namespace ProjectBundle\Controller;
 
 use ProjectBundle\Entity\Demande;
+use ProjectBundle\Entity\Donation;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -128,7 +129,7 @@ class DemandeController extends Controller
      */
     public function newAction(Request $request)
     {
-        $demande = new Demande();
+        $demande = new Demande(0);
         $form = $this->createForm('ProjectBundle\Form\DemandeType', $demande);
         $form->handleRequest($request);
 
@@ -156,15 +157,19 @@ class DemandeController extends Controller
     /**
      * Finds and displays a demande entity.
      *
-     * @Route("/{id}", name="demande_show")
+     * @Route("/show/{id}", name="demande_show")
      * @Method("GET")
      */
     public function showAction(Demande $demande)
     {
         $deleteForm = $this->createDeleteForm($demande);
+        $em = $this->getDoctrine()->getManager();
+
+        $donations = $em->getRepository('ProjectBundle:Donation')->findByDemandeDonation($demande);
 
         return $this->render('demande/show.html.twig', array(
             'demande' => $demande,
+            'donations' => $donations,
             'delete_form' => $deleteForm->createView(),
         ));
     }
@@ -229,4 +234,45 @@ class DemandeController extends Controller
             ->getForm()
         ;
     }
+
+
+
+
+
+
+
+    /**
+     * Creates a new ActionItem entity.
+     *
+     * @Route("/search/", name="ajaxx_search")
+     * @Method("GET")
+     */
+    public function searchAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $requestString = $request->get('q');
+
+        $demandes =  $em->getRepository('ProjectBundle:Demande')->findEntitiesByString($requestString);
+
+        if(!$demandes) {
+            $result['demandes']['error'] = "Demande n'existe pas";
+        } else {
+            $result['demandes'] = $this->getRealEntities($demandes);
+        }
+
+        return new Response(json_encode($result));
+    }
+
+    public function getRealEntities($demandes){
+
+        foreach ($demandes as $demande){
+            $realEntities[$demande->getId()] = [$demande->getPhotoDemande(),$demande->getTitreDemande()];
+        }
+
+        return $realEntities;
+    }
+
+
+
 }

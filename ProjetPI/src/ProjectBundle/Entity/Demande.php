@@ -23,7 +23,8 @@ class Demande
 
     /**
      * @ORM\Column(name="photo_demande", type="string", length=500)
-     * @Assert\File(maxSize="500k", mimeTypes={"image/jpeg", "image/jpg", "image/png", "image/GIF"})
+     * @Assert\NotBlank(message="veuillez inserer une photo")
+     * @Assert\File(maxSize="500k", mimeTypes={"image/jpeg", "image/jpg", "image/png", "image/GIF"}, mimeTypesMessage="Veuillez inserer une image de type jpeg, jpg, png ou GIF")
      */
     private $photoDemande;
 
@@ -39,6 +40,7 @@ class Demande
      * @var enum
      *
      * @ORM\Column(name="type_demande", type="string", columnDefinition="enum('fourniture scolaire', 'vetements', 'materiel', 'nourriture')")
+     * @Assert\NotBlank(message="Le type est obligatoire")
      */
     private $typeDemande;
 
@@ -57,6 +59,13 @@ class Demande
      * @var string
      *
      * @ORM\Column(name="description_demande", type="string", length=255)
+     * @Assert\NotBlank(message="La description est obligatoire")
+     * @Assert\Length(
+     *      min = 5,
+     *      max = 255,
+     *      minMessage = "La description doit comporter au moins 5 caractères",
+     *      maxMessage = "La description doit comporter au plus 255 caractères"
+     * )
      */
     private $descriptionDemande;
 
@@ -64,9 +73,24 @@ class Demande
      * @var string
      *
      * @ORM\Column(name="titre_demande", type="string", length=255)
+     * @Assert\NotBlank(message="Le titre est obligatoire")
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 20,
+     *      minMessage = "Le titre doit comporter au moins 2 caractères",
+     *      maxMessage = "Le titre doit comporter au plus 20 caractères"
+     * )
      */
     private $titreDemande;
 
+    /**
+     * Demande constructor.
+     * @param int $etatDemande
+     */
+    public function __construct($etatDemande)
+    {
+        $this->etatDemande = $etatDemande;
+    }
 
 
     /**

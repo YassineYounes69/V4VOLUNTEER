@@ -1,7 +1,10 @@
 <?php
 
 namespace ProjectBundle\Repository;
-
+use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\NonUniqueResultException;
+use Doctrine\ORM\Query;
+use ProjectBundle\Entity\Evenement;
 /**
  * EvenementRepository
  *
@@ -10,4 +13,33 @@ namespace ProjectBundle\Repository;
  */
 class EvenementRepository extends \Doctrine\ORM\EntityRepository
 {
+    public  function findbest()
+    {
+        $query= $this->getEntityManager()
+            ->createQuery('SELECT R FROM ProjectBundle:Evenement R WHERE R.nbParticipant=
+                               (SELECT MAX(C.nbParticipant) FROM ProjectBundle:Evenement C where (C.date) > CURRENT_TIMESTAMP() )');
+
+        ;
+        return $query->getResult();
+    }
+    public  function trierEvenement()
+    {
+        $query= $this->getEntityManager()
+            ->createQuery("select m from ProjectBundle:Evenement m WHERE m.nom  ORDER BY m.nom DESC ")
+
+        ;
+        return $query->getResult();
+    }
+
+    public function findEntitiesByString($str){
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT p
+                FROM ProjectBundle:Evenement p
+                WHERE p.nom LIKE :str'
+            )
+            ->setParameter('str', '%'.$str.'%')
+            ->getResult();
+    }
+
 }

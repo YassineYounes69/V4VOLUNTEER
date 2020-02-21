@@ -22,21 +22,24 @@
 
 
 
-                        {{ form_start(edit_form) }}
+                        {{ form_start(edit_form, {'attr': {'novalidate': 'novalidate'}}) }}
                         <div class="clearfix"></div>
                         <div>
                             <span>Type<label>:</label></span>
                             {{ form_widget(edit_form.typeDemande) }}
+                            {{ form_errors (edit_form.typeDemande) }}
                         </div>
                         <div class="clearfix"></div>
                         <div>
                             <span>Titre<label>:</label></span>
                             {{ form_widget(edit_form.titreDemande) }}
+                            {{ form_errors(edit_form.titreDemande) }}
                         </div>
                         <div class="clearfix"></div>
                         <div>
                             <span>Description<label>:</label></span>
                             {{ form_widget(edit_form.descriptionDemande) }}
+                            {{ form_errors(edit_form.descriptionDemande) }}
                         </div>
 
                         <div class="clearfix"> </div>

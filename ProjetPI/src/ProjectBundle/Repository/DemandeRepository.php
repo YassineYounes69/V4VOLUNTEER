@@ -10,4 +10,18 @@ namespace ProjectBundle\Repository;
  */
 class DemandeRepository extends \Doctrine\ORM\EntityRepository
 {
+
+
+    public function findEntitiesByString($str){
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT e
+                FROM ProjectBundle:Demande e
+                WHERE e.titreDemande LIKE :str'
+            )
+            ->setParameter('str', '%'.$str.'%')
+            ->getResult();
+    }
+
+
 }

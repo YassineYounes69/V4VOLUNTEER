@@ -3,7 +3,7 @@
 namespace ProjectBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use AppBundle\Entity\User;
 /**
  * Reservation
  *
@@ -27,7 +27,7 @@ class Reservation
      *   @ORM\JoinColumn(name="id_user", referencedColumnName="id", nullable=true , onDelete="CASCADE")
      * })
      */
-    private $id_user;
+    private $idUser;
     /**
      * @var \ProjectBundle\Entity\Evenement
      *
@@ -36,7 +36,7 @@ class Reservation
      *   @ORM\JoinColumn(name="id_evenement", referencedColumnName="reference" , onDelete="CASCADE")
      * })
      */
-    private $id_evenement;
+    private $idEvenement;
 
     /**
      * @param int $ref
@@ -47,35 +47,36 @@ class Reservation
     }
 
     /**
-     * @param \AppBundle\Entity\User $id_user
+     * @return User
      */
-    public function setIdUser($id_user)
+    public function getIdUser()
     {
-        $this->id_user = $id_user;
+        return $this->idUser;
     }
 
-    /**
-     * @param Evenement $id_evenement
-     */
-    public function setIdEvenement($id_evenement)
-    {
-        $this->id_evenement = $id_evenement;
-    }
 
     /**
      * @return Evenement
      */
     public function getIdEvenement()
     {
-        return $this->id_evenement;
+        return $this->idEvenement;
     }
 
     /**
-     * @return \AppBundle\Entity\User
+     * @param Evenement $idEvenement
      */
-    public function getIdUser()
+    public function setIdEvenement($idEvenement)
     {
-        return $this->id_user;
+        $this->idEvenement = $idEvenement;
+    }
+
+    /**
+     * @param User $idUser
+     */
+    public function setIdUser($idUser)
+    {
+        $this->idUser = $idUser;
     }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace ProjectBundle\Controller;
 
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -9,23 +10,13 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
+        $em = $this->getDoctrine()->getManager();
 
-        $snappy = $this->get('knp_snappy.pdf');
+        $demandes = $em->getRepository('ProjectBundle:Demande')->findAll();
 
-        $html = $this->renderView('demande/pdf.html.twig', array(
-            //..Send some data to your view if you need to //
+        return $this->render('demande/index.html.twig', array(
+            'demandes' => $demandes,
         ));
-
-        $filename = 'myFirstSnappyPDF';
-
-        return new Response(
-            $snappy->getOutputFromHtml($html),
-            200,
-            array(
-                'Content-Type'          => 'application/pdf',
-                'Content-Disposition'   => 'inline; filename="'.$filename.'.pdf"'
-            )
-        );
     }
 
 }

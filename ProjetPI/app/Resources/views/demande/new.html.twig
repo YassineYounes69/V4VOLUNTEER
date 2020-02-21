@@ -14,20 +14,79 @@
     <div class="donate-top">
         <h1>Demande de don</h1>
 
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-        {{ form_end(form) }}
+        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
 
-        <ul>
-            <li>
-                <span class="button"><a class="read trd" href="{{ path('demande_index') }}">Retour à la liste</a></span>
 
-            </li>
-        </ul>
-    </div>
+        <div class="clearfix">
+            <label>Type</label>
+            {{ form_widget(form.typeDemande) }}
         </div>
+        <div class="clearfix">
+            <label>Titre</label>
+            {{ form_widget(form.titreDemande) }}
+            {{ form_errors (form.titreDemande) }}
+        </div>
+        <div class="clearfix">
+            <label>Description</label>
+            {{ form_widget(form.descriptionDemande) }}
+            {{ form_errors (form.descriptionDemande) }}
+        </div>
+        <div class="clearfix">
+            <label>Photo</label>
+            {{ form_widget(form.photoDemande) }}
+            {{ form_errors (form.photoDemande) }}
+        </div>
+
+
+
+<br>
+        <br>
+        <br>
+
+
+        <input type="submit" value="Ajout " />
+
+
+
+
+
+
+
+
+        {{ form_end(form) }}
+        <br>
+        <br>
+        <br>
+
+
+
     </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+    <span class="button"><a class="read trd" href="{{ path('demande_index') }}">Retour à la liste</a></span>
+
+</div>
 </div>
 {% endblock %}
 
