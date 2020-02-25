@@ -1,0 +1,64 @@
+project_homepage:
+    path:     /
+    defaults: { _controller: ProjectBundle:Default:index }
+ajouterEvenement:
+    path:     /ajouterEvenement
+    defaults: { _controller: ProjectBundle:Evenement:ajouterEvenement }
+modifierEvenement:
+    path:     /{reference}/modifierEvenement
+    defaults: { _controller: ProjectBundle:Evenement:modifierEvenement }
+supprimerEvenement:
+    path:     /{reference}/supprimerEvenement
+    defaults: { _controller: ProjectBundle:Evenement:supprimerEvenement }
+afficherListe:
+    path:     /afficherListe
+    defaults: { _controller: ProjectBundle:Evenement:afficherEvenements }
+participerEvenement:
+    path:     /{reference}/participerEvenement
+    defaults: { _controller: ProjectBundle:Reservation:participerEvenement }
+
+abandonnerEvenement:
+    path:     /{reference}/abandonnerEvenement
+    defaults: { _controller: ProjectBundle:Reservation:abandonnerEvenement }
+afficherEvenement:
+    path:     /{reference}/afficherEvenement
+    defaults: { _controller: ProjectBundle:Evenement:afficherEvenement }
+afficherReservations:
+    path:     /afficherReservations
+    defaults: { _controller: ProjectBundle:Reservation:afficherReservation }
+supprimerReservation:
+    path:     /{ref}/supprimerReservation
+    defaults: { _controller: ProjectBundle:Reservation:supprimerReservation }
+mesParticipation:
+    path:     /mesParticipation
+    defaults: { _controller: ProjectBundle:Reservation:affichermesparticipation }
+search_ajax:
+    path:     /searchAjax
+    defaults: { _controller: ProjectBundle:Evenement:searchAjax }
+ajouterPub:
+    path:     /ajouterPub
+    defaults: { _controller: ProjectBundle:Publication:ajouterPublication }
+modifierPublication:
+  path:     /{id}/modifierPublication
+  defaults: { _controller: ProjectBundle:Publication:modifierPublication }
+supprimerPublication:
+  path:     /{id}/supprimerPublication
+  defaults: { _controller: ProjectBundle:Publication:supprimerPublication }
+afficherPub:
+    path:     /afficherPub
+    defaults: { _controller: ProjectBundle:Publication:afficherPublications }
+ajouterCommentaire:
+    path:     /{id}/ajouterCommentaire
+    defaults: { _controller: ProjectBundle:Commentaire:Commenter }
+aimer:
+    path:     /{reference}/aimer
+    defaults: { _controller: ProjectBundle:Reservation:AimerEvenement }
+dislike:
+    path:     /{reference}/dislike
+    defaults: { _controller: ProjectBundle:Reservation:dislike }
+ajouterReservation:
+    path:     /ajouterReservation
+    defaults: { _controller: ProjectBundle:Reservation:ajouterReservation }
+modifierReservation:
+    path:     /{ref}/modifierReservation
+    defaults: { _controller: ProjectBundle:Reservation:modifierReservation }
