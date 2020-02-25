@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="card-body">
+        <h2 class="card-title" align="center"> LISTE DES REFUGIES </h2>
+        <br>
+        <br>
+
+
+        <p class="card-description">
+
+            <a href="{{ path('project_AfficherRefBack') }}">
+                <center>
+                    {% if is_granted('ROLE_ASSO') %}
+                <button type="button" class="btn btn-success btn-rounded btn-fw"  >Accéder Aux Actions </button>
+                    {% endif %}
+                </center>
+
+            </a>
+        </p>
+        <br>
+        <br>
+        <br>
+        <script src="{{ asset('js/sorttable.js') }}"></script>
+        <div class="table-responsive">
+            <table id="contenu" class="sortable" width="100%" >
+                <thead>
+                <tr>
+                    <th>
+                        Nom
+                    </th>
+                    <th>
+                        Prenom
+                    </th>
+                    <th>
+                        Pays
+                    </th>
+                    <th>
+                        Etat Civil
+                    </th>
+
+                    <th>
+                        Age
+                    </th>
+
+                    <th>
+                        Gender
+                    </th>
+                    <th>
+                        Image
+                    </th>
+
+
+                </tr>
+                </thead>
+                <tbody>
+                {% for r in Refugies %}
+                    <tr>
+                        <td>{{ r.nomref }}</td>
+                        <td>{{ r.prenomref }}</td>
+                        <td>{{ r.paysref }}</td>
+                        <td>{{ r.etatref }}</td>
+                        <td>{{ r.ageref }}</td>
+                        <td>{{ r.genderref }}</td>
+                        <td>{{ r.image }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}
+

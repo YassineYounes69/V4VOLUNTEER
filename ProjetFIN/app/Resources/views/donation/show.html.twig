@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+
+
+
+
+    <div class="clearfix"></div>
+    <div class="banner two">
+        <h2>don</h2>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="blog-section">
+        <div class="container">
+            <div class="blog-top">
+                <div class="grid_3 two">
+                    <h3>{{ donation.userDonation }}</h3>
+                    <p>{{ donation.quantiteDonation }} elements de type {{ donation.typeDonation }}</p>
+                    <p>
+
+                        <span class="button"><a class="read trd" href="{{ path('demande_index') }}">Retour à la liste</a></span>
+                        <span class="button"><a class="read trd" href="{{ path('donation_edit', { 'id': donation.id }) }}">Modifier le Don</a></span>
+
+                        <span class="button" type="submit" value="Delete"><a class="read trd"  href="{{ path('donation_delete', { 'id': donation.id }) }}">Effacer le Don</a></span>
+
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+{% endblock %}

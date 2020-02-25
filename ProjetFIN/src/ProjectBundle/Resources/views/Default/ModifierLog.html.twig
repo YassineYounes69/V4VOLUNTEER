@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+
+    <!doctype html>
+    <html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>{% block title %}Modifier un Logement{% endblock %}</title>
+        <link href="{{ asset('css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+        <!-- Custom Theme files -->
+        <link href="{{ asset('css/style.css') }}" rel='stylesheet' type='text/css' />
+        <script src="{{ asset('js/jquery.min.js') }}"> </script>
+    </head>
+    <body>
+    <form method="post">
+        <div class="container"  align="left" >
+            {{ form_start(form,{'attr':{'novalidate':'novalidate'}}) }}
+
+            {% set class='' %}
+            {% if not form.nomLog.vars.valid %}
+                {% set class='has-error' %}
+            {% endif %}
+            <div class="form-group">
+                <label class="control-label" for="{{ form.nomLog.vars.id}}">Nom Du Logement</label>
+                <br>
+                <input type="text"  style="width: 320px" class="form-control" id="{{ form.nomLog.vars.id}}" name="{{  form.nomLog.vars.full_name}}" value="{{  form.nomLog.vars.value}}">
+                {{ form_errors(form.nomLog) }}
+                {% do form.nomLog.setRendered %}
+                {% if not form.nomLog.vars.valid %}
+                    {% for error in form.nomLog.vars.errors  %}
+                        <span class="help-block"></span>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            {% set class='' %}
+            {% if not form.adresse.vars.valid %}
+                {% set class='has-error' %}
+            {% endif %}
+            <div class="form-group">
+                <label class="control-label" for="{{ form.adresse.vars.id}}">Adresse Du Logement</label>
+                <br>
+                <input type="text" style="width: 320px" class="form-control" id="{{ form.adresse.vars.id}}" name="{{  form.adresse.vars.full_name}}" value="{{  form.adresse.vars.value}}">
+                {{ form_errors(form.adresse) }}
+                {% do form.adresse.setRendered %}
+                {% if not form.adresse.vars.valid %}
+                    {% for error in form.adresse.vars.errors  %}
+                        <span class="help-block"></span>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            {% set class='' %}
+            {% if not form.nbChambre.vars.valid %}
+                {% set class='has-error' %}
+            {% endif %}
+            <div class="form-group">
+                <label class="control-label" for="{{ form.nbChambre.vars.id}}">Nombre De Chambres</label>
+                <input type="number" style="width: 320px" class="form-control" id="{{ form.nbChambre.vars.id}}" name="{{  form.nbChambre.vars.full_name}}" value="{{  form.nbChambre.vars.value}}">
+                {{ form_errors(form.nbChambre) }}
+                {% do form.nbChambre.setRendered %}
+                {% if not form.nbChambre.vars.valid %}
+                    {% for error in form.nbChambre.vars.errors  %}
+                        <span class="help-block"></span>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            <br>
+            <br>
+
+
+        </div>
+        <br>
+        <br>
+
+        <div align="center">
+
+
+            <button href="{{ path('project_AjouterLog') }}" type="submit" class="btn btn-success btn-rounded btn-fw" id="submit"  > Modifier </button>
+            {% do form.Ajouter.setRendered %}
+
+
+
+        </div>
+        {{ form_end(form) }}
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </form>
+    </body>
+    </html>
+{% endblock %}

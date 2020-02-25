@@ -1,0 +1,99 @@
+{% extends 'EspaceAdmin.html.twig' %}
+
+{% block content %}
+
+    <div class="card-body">
+        <h4 class="card-title">LISTE DES LOGEMENT </h4>
+        <p class="card-description">
+            <a href="{{ path('project_AjouterLog') }}">
+                <button type="button" class="btn btn-success btn-rounded btn-fw">NOUVEAU</button>
+            </a>                                <div class="table-responsive">
+            <table id="contenu" class="table table-hover" >
+                <thead>
+                <tr>
+                    <th>
+                        Nom logement
+                    </th>
+                    <th>
+                        Adresse du Logement
+                    </th>
+                    <th>
+                        Nombre de chambres
+                    </th>
+                    <th>
+                        Etat Logement
+                    </th>
+
+                    <th>
+                        Action
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for l in Logement %}
+                    <tr>
+                        <td>
+                            {{ l.nomLog }}
+                        </td>
+                        <td>
+                            {{ l.adresse }}
+                        </td>
+                        <td>
+                            {{ l.nbChambre }}
+                        </td>
+                        <td>
+                            {{ l.etatLog }}
+                        </td>
+                        <td>
+
+                            <a href="{{ path('project_ModifierLog',{idlog:l.idlog}) }}">
+                                <button type="button" class="btn btn-success btn-rounded btn-icon">
+                                    <i class="ti-pencil"></i>
+                                </button>
+                            </a>
+
+                            <a href="{{ path('project_SupprimerLog',{idlog:l.idlog}) }}">
+                                <button type="button" class="btn btn-danger btn-rounded btn-icon">
+                                    <i class="ti-trash"></i>
+                                </button>
+                            </a>
+
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="{{ asset('jquery-3.1.1.js') }}"></script>
+    <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searsh");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("contenu");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+
+            }
+        }
+    </script>
+
+
+{% endblock %}
+
+
+
+
+

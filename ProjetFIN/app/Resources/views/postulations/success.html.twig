@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Postulation envoyée avec succées</h1>
+
+
+
+    <ul>
+        <li>
+            <a href="{{ path('opportunity_search') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('postulations_edit', { 'id': postulation.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
