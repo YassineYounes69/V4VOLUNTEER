@@ -19,7 +19,10 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new AppBundle\AppBundle(),
             new ProjectBundle\ProjectBundle(),
+<<<<<<< HEAD
             new Gregwar\CaptchaBundle\GregwarCaptchaBundle(),
+=======
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

@@ -3,6 +3,10 @@
 namespace ProjectBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+<<<<<<< HEAD
+=======
+use Symfony\Component\Validator\Constraints as Assert;
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
 
 /**
  * Evenement
@@ -31,7 +35,11 @@ class Evenement
     /**
      * @var string
      *
+<<<<<<< HEAD
      * @ORM\Column(name="description", type="string", length=255)
+=======
+     * @ORM\Column(name="description", type="text", length=1000, nullable=false)
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
      */
     private $description;
 
@@ -57,6 +65,7 @@ class Evenement
     private $prix;
 
     /**
+<<<<<<< HEAD
      * @var \DateTime
      *
      * @ORM\Column(name="heureDebut", type="time")
@@ -75,10 +84,54 @@ class Evenement
      * @ORM\Column(name="image", type="string", length=255, nullable=true)
      */
     private $image;
+=======
+     * @var int
+     *
+     * @ORM\Column(name="nbParticipant", type="integer")
+     */
+    private $nbParticipant;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lieu", type="string", length=255)
+     */
+    private $lieu;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="createur", type="string", length=255)
+     */
+    private $createur;
 
     /**
      * @return string
      */
+    public function getCreateur()
+    {
+        return $this->createur;
+    }
+
+    /**
+     * @param string $createur
+     */
+    public function setCreateur($createur)
+    {
+        $this->createur = $createur;
+    }
+
+
+
+    public function __toString()
+    {
+return $this->description ;
+    }
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
+
+    /**
+     * @return string
+     */
+<<<<<<< HEAD
     public function getImage()
     {
         return $this->image;
@@ -91,11 +144,46 @@ class Evenement
     {
         $this->image = $image;
     }
+=======
+    public function getLieu()
+    {
+        return $this->lieu;
+    }
+
+    /**
+     * @return int
+     */
+    public function getNbParticipant()
+    {
+        return $this->nbParticipant;
+    }
+
+    /**
+     * @param string $lieu
+     */
+    public function setLieu($lieu)
+    {
+        $this->lieu = $lieu;
+    }
+
+    /**
+     * @param int $nbParticipant
+     */
+    public function setNbParticipant($nbParticipant)
+    {
+        $this->nbParticipant = $nbParticipant;
+    }
+
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
     /**
      *
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User")
      * @ORM\JoinColumns({
+<<<<<<< HEAD
      *   @ORM\JoinColumn(name="id_membre", referencedColumnName="id", nullable=true)
+=======
+     *  @ORM\JoinColumn(name="id_membre", referencedColumnName="id", nullable=true)
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
      * })
      */
     private $id_membre;
@@ -157,15 +245,20 @@ class Evenement
     }
 
     /**
+<<<<<<< HEAD
      * Set description
      *
      * @param string $description
      *
      * @return Evenement
+=======
+     * @param string $description
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
      */
     public function setDescription($description)
     {
         $this->description = $description;
+<<<<<<< HEAD
 
         return $this;
     }
@@ -173,6 +266,11 @@ class Evenement
     /**
      * Get description
      *
+=======
+    }
+
+    /**
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
      * @return string
      */
     public function getDescription()
@@ -180,6 +278,10 @@ class Evenement
         return $this->description;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
     /**
      * Set date
      *
@@ -252,6 +354,7 @@ class Evenement
         return $this->prix;
     }
 
+<<<<<<< HEAD
     /**
      * Set heureDebut
      *
@@ -299,5 +402,11 @@ class Evenement
     {
         return $this->duree;
     }
+=======
+
+
+
+
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
 }
 

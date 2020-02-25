@@ -1,8 +1,12 @@
 <?php
 
 namespace ProjectBundle\Entity;
+<<<<<<< HEAD
 
 
+=======
+use Symfony\Component\Validator\Constraints as Assert;
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,6 +26,16 @@ class Demande
      */
     private $id;
 
+<<<<<<< HEAD
+=======
+    /**
+     * @ORM\Column(name="photo_demande", type="string", length=500)
+     * @Assert\File(maxSize="500k", mimeTypes={"image/jpeg", "image/jpg", "image/png", "image/GIF"})
+     */
+    private $photoDemande;
+
+
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
 
     /**
      * @ORM\OneToMany(targetEntity="Donation", mappedBy="demandeDonation",cascade={"persist","remove"} )
@@ -177,9 +191,37 @@ class Demande
         $this->typeDemande = $typeDemande;
     }
 
+<<<<<<< HEAD
 
 
 
+=======
+    /**
+     * @return mixed
+     */
+    public function getPhotoDemande()
+    {
+        return $this->photoDemande;
+    }
+
+    /**
+     * @param mixed $photoDemande
+     */
+    public function setPhotoDemande($photoDemande)
+    {
+        $this->photoDemande = $photoDemande;
+    }
+
+
+
+    public function __toString(){
+        // to show the name of the Category in the select
+        return strval($this->id);
+        // to show the id of the Category in the select
+        // return $this->id;
+    }
+
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
 
 }
 

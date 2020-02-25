@@ -56,6 +56,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+<<<<<<< HEAD
       <path value="$PROJECT_DIR$/vendor/php-http/discovery" />
       <path value="$PROJECT_DIR$/vendor/php-http/client-common" />
       <path value="$PROJECT_DIR$/vendor/php-http/httplug" />
@@ -76,12 +77,19 @@
       <path value="$PROJECT_DIR$/vendor/gregwar/captcha" />
       <path value="$PROJECT_DIR$/vendor/gregwar/captcha-bundle" />
       <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
+=======
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
     </include_path>
   </component>
   <component name="ProjectId" id="1XTGVTNB7N7KRqgT7f7eXwlWJqw" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Pepiniere-PIDEV-WEB" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -103,10 +111,17 @@
       <recent name="C:\wamp64\www\ProjetPI\src\ProjectBundle\Resources\views" />
       <recent name="C:\wamp64\www\ProjetPI\web" />
     </key>
+<<<<<<< HEAD
+=======
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ProjetPI\app\Resources\views" />
+    </key>
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="s doctrine:schema:create" />
+<<<<<<< HEAD
       <command value="s generate:bundle" />
       <command value="s doctrine:generate:entity" />
       <command value="s doctrine:database:create" />
@@ -126,6 +141,19 @@
       <command value="composer require gregwar/captcha-bundle" />
       <command value="s server:run" />
       <command value="c dump-autoload" />
+=======
+      <command value="c dump-autoload" />
+      <command value="s debug:router" />
+      <command value="s doctrine:database:create" />
+      <command value="s generate:bundle" />
+      <command value="s doctrine:generate:entity" />
+      <command value="s doctrine:generate:form Evenement" />
+      <command value="s doctrine:generate:form ProjectBundle:Evenement" />
+      <command value="s generate:controller" />
+      <command value="s doctrine:schema:update --force" />
+      <command value="s doctrine:generate:form ProjectBundle:Reservation" />
+      <command value="s server:run" />
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
     </option>
   </component>
   <component name="RunDashboard">
@@ -168,6 +196,7 @@
       <workItem from="1581320339874" duration="7985000" />
       <workItem from="1581339035177" duration="16774000" />
       <workItem from="1581357856348" duration="1309000" />
+<<<<<<< HEAD
       <workItem from="1581366782840" duration="3524000" />
       <workItem from="1581409845347" duration="1214000" />
       <workItem from="1581415656625" duration="858000" />
@@ -180,6 +209,11 @@
       <workItem from="1581938884193" duration="10505000" />
       <workItem from="1581978038496" duration="11962000" />
       <workItem from="1582023293220" duration="34180000" />
+=======
+      <workItem from="1581604125956" duration="16435000" />
+      <workItem from="1581703305402" duration="41278000" />
+      <workItem from="1581965298969" duration="15310000" />
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
     </task>
     <servers />
   </component>

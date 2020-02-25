@@ -2,6 +2,7 @@
 
 namespace ProjectBundle\Controller;
 
+<<<<<<< HEAD
 use Ramsey\Uuid\UuidInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
@@ -11,11 +12,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+=======
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
 
 class DefaultController extends Controller
 {
     public function indexAction()
     {
+<<<<<<< HEAD
         return $this->render('@Project/Default/dashboard.html.twig');
     }
 
@@ -99,4 +104,8 @@ class DefaultController extends Controller
     }
 
 
+=======
+        return $this->render('ProjectBundle:Default:index.html.twig');
+    }
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
 }

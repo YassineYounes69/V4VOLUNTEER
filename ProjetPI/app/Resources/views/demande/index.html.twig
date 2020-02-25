@@ -1,0 +1,45 @@
+{% extends 'Base.html.twig' %}
+
+{% block content %}
+    <div class="clearfix"></div>
+    <div class="banner two">
+        <h2>Demandes de don</h2>
+    </div>
+    <ul>
+        <li>
+            <span class="button"><a class="read trd" href="{{ path('demande_new') }}"> + demande</a></span>
+            <span class="button"><a class="read trd" href="{{ path('liste_demande_pdf') }}">imprimer</a></span>
+        </li>
+    </ul>
+
+<div class="blog-section">
+    {% for demande in demandes %}
+    <div class="container">
+        <div class="blog-top">
+            <div class="col-md-6 grid_3">
+                <h3><a href={{ path('demande_show', { 'id': demande.id }) }}>{{ demande.titreDemande }}</a></h3>
+                <a href={{ path('demande_show', { 'id': demande.id }) }}><img src="{{ asset('images/' ~ demande.photoDemande) }}" alt=""/></a>
+                <div class="blog-poast-admin">
+
+                </div>
+                <div class="blog-poast-info">
+                    <ul>
+                        <li><i class="admin"> </i><a class="admin" href="#"><span> </span> {{ demande.typeDemande }} </a></li>
+                        <li><i class="date"> </i><span> </span>12-04-2015</li>
+                        <li><i class="comment"> </i><a class="p-blog" href="#"><span> </span>3 Comments </a></li>
+                    </ul>
+                </div>
+                <p>{{ demande.descriptionDemande }}</p>
+                <div class="button"><a class="read trd" href={{ path('demande_show', { 'id': demande.id }) }}>afficher + </a></div>
+            </div>
+    {% endfor %}
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

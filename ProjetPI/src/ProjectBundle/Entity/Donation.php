@@ -22,7 +22,11 @@ class Donation
     private $id;
 
     /**
+<<<<<<< HEAD
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", cascade={"persist","remove"} ,inversedBy="demandeUser", fetch="LAZY" )
+=======
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", cascade={"persist"} ,inversedBy="demandeUser", fetch="LAZY" )
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id",nullable=true)
      */
     private $userDonation;
@@ -55,6 +59,21 @@ class Donation
      */
     private $quantiteDonation;
 
+<<<<<<< HEAD
+=======
+    /**
+     * Donation constructor.
+     * @param $demandeDonation
+     */
+    public function __construct($demandeDonation,$userDonation,$etatDonation,$typeDonation)
+    {
+        $this->demandeDonation = $demandeDonation;
+        $this->userDonation = $userDonation;
+        $this->etatDonation = $etatDonation;
+        $this->typeDonation = $typeDonation;
+    }
+
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
 
     /**
      * Get id
@@ -146,6 +165,12 @@ class Donation
         $this->demandeDonation = $demandeDonation;
     }
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
     /**
      * @return enum
      */
@@ -163,5 +188,9 @@ class Donation
     }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
 }
 

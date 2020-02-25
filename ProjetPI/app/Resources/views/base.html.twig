@@ -12,7 +12,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- Custom Theme files -->
         <link href="{{ asset('css/style.css') }}" rel='stylesheet' type='text/css' />
         <script src="{{ asset('js/jquery.min.js') }}"> </script>
+<<<<<<< HEAD
 
+=======
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
         <!--webfonts-->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700|Playball' rel='stylesheet' type='text/css'>
         <!--//webfonts-->
@@ -25,6 +28,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="container">
                     <div class="logo">
                         <a href="#"><h1>V4<span>Volunteer</span></h1></a>
+<<<<<<< HEAD
                     </div>
                     <span class="menu"></span>
                     <div class="top-menu">
@@ -95,6 +99,75 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="clearfix"> </div>
                         </div>
                     </div>
+=======
+                    </div>
+                    <span class="menu"></span>
+                    <div class="top-menu">
+                        <ul class="cl-effect-16">
+                            <li><a class="active" href="#" data-hover="HOME">Home</a></li>
+                            <li><a href="#" data-hover="About">About</a></li>
+                            <li><a href="#" data-hover="SERVICES">SERVICES</a></li>
+                            <li><a href="{{ path("afficherListe") }}" data-hover="Donations">Evénement</a></li>
+                            <li><a href="#" data-hover="BLOG">BLOG</a></li>
+                            <li><a href="{{ path("fos_user_security_login") }}" data-hover="CONTACT">Se connecter</a></li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                    </div>
+                    <!-- script for menu -->
+                    <script>
+                        $( "span.menu" ).click(function() {
+                            $( ".top-menu" ).slideToggle( "slow", function() {
+                                // Animation complete.
+                            });
+                        });
+                    </script>
+                    <!-- script for menu -->
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        {% endblock %}
+
+
+        {% block content %}
+        {% endblock %}
+
+
+        {% block footer %}
+        <div class="footer text-center">
+            <div class="container">
+                <div class="footer-grids">
+                    <div class="col-md-4 footer-text">
+                        <h3>About Us</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's.</p>
+                    </div>
+                    <div class="col-md-4 footer-flickr">
+                        <h3>Flickr Feed</h3>
+                        <div class="flickr-grids">
+                            <div class="flickr-grid">
+                                <a href="#"><img src="{{ asset('images/t1.jpg') }}" alt=""/></a>
+                            </div>
+                            <div class="flickr-grid">
+                                <a href="#"><img src="{{ asset('images/t2.jpg') }}" alt=""/></a>
+                            </div>
+                            <div class="flickr-grid">
+                                <a href="#"><img src="{{ asset('images/t3.jpg') }}" alt=""/></a>
+                            </div>
+                            <div class="clearfix"> </div>
+
+                            <div class="flickr-grid">
+                                <a href="#"><img src="{{ asset('images/t4.jpg') }}" alt=""/></a>
+                            </div>
+                            <div class="flickr-grid">
+                                <a href="#"><img src="{{ asset('images/t1.jpg') }}" alt=""/></a>
+                            </div>
+                            <div class="flickr-grid">
+                                <a href="#"><img src="{{ asset('images/t3.jpg') }}" alt=""/></a>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
                     <div class="col-md-4 footer-info">
                         <h3>Get In Touch</h3>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since, </p>

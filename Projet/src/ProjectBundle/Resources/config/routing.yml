@@ -1,0 +1,25 @@
+project_homepage:
+    path:     /
+    defaults: { _controller: ProjectBundle:Default:index }
+ajouterEvenement:
+   path:     /ajouterEvenement
+   defaults: { _controller: ProjectBundle:Evenement:ajouterEvenement }
+modifierEvenement:
+   path:     /{reference}/modifierEvenement
+   defaults: { _controller: ProjectBundle:Evenement:modifierEvenement }
+supprimerEvenement:
+   path:     /{reference}/supprimerEvenement
+   defaults: { _controller: ProjectBundle:Evenement:supprimerEvenement }
+afficherListe:
+   path:     /afficherListe
+   defaults: { _controller: ProjectBundle:Evenement:afficherEvenements }
+participerEvenement:
+   path:     /{reference}/participerEvenement
+   defaults: { _controller: ProjectBundle:Reservation:participerEvenement }
+
+abandonnerEvenement:
+   path:     /{reference}/abandonnerEvenement
+   defaults: { _controller: ProjectBundle:Reservation:abandonnerEvenement }
+afficherEvenement:
+   path:     /{reference}/afficherEvenement
+   defaults: { _controller: ProjectBundle:Evenement:afficherEvenement }

@@ -3,8 +3,11 @@
 namespace ProjectBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+<<<<<<< HEAD
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
+=======
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
 
 /**
  * Refugies
@@ -57,11 +60,14 @@ class Refugies
         $this->id_membre = $id_membre;
     }
 
+<<<<<<< HEAD
     public function __toString()
     {
         return $this->nomRef;
     }
 
+=======
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
     /**
      * @param int $ageRef
      */
@@ -190,8 +196,12 @@ class Refugies
 
     /**
      * @var string
+<<<<<<< HEAD
      *@Assert\Type("alpha",
      * message="ce champs doit etre de type string ")
+=======
+     *
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
      * @ORM\Column(name="etat_ref", type="string", length=255)
      */
     private $etatRef;
@@ -199,17 +209,24 @@ class Refugies
     /**
      * @var string
      *
+<<<<<<< HEAD
      * @Assert\Type("alpha",
      * message="ce champs doit etre de type string ")
      *
+=======
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
      * @ORM\Column(name="nom_ref", type="string", length=255)
      */
     private $nomRef;
 
     /**
+<<<<<<< HEAD
      * @Assert\Type("alpha",
      * message="ce champs doit etre de type string ")
      *
+=======
+     * @var string
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
      *
      * @ORM\Column(name="prenom_ref", type="string", length=255)
      */
@@ -218,12 +235,15 @@ class Refugies
     /**
      * @var int
      *
+<<<<<<< HEAD
      *
      * @Assert\GreaterThan(value=0,
      * message="Le nombre doit etre supérieur à 0 "
      *)
      *
      *
+=======
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
      * @ORM\Column(name="age_ref", type="integer")
      */
     private $ageRef;
@@ -231,9 +251,12 @@ class Refugies
     /**
      * @var string
      *
+<<<<<<< HEAD
      *@Assert\Type("alpha",
      * message="ce champs doit etre de type string ")
      *
+=======
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
      * @ORM\Column(name="gender_ref", type="string", length=255)
      */
     private $genderRef;
@@ -245,6 +268,7 @@ class Refugies
      */
     private $image;
 
+<<<<<<< HEAD
     public static function loadValidatorMetadataAction(ClassMetadata $metadata)
     {
 
@@ -255,6 +279,8 @@ class Refugies
             'message' => 'The value {{ value }} is not a valid {{ type }}.',
         ]));
     }
+=======
+>>>>>>> af282b06661706d128dc0ce87d0d0196d5239e87
 
 
 }
