@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="clearfix"></div>
+    </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="banner two">
+        <h2>Espace événement</h2>
+
+    </div>
+    </div>
+    <!--banner-bottom-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <!-- events -->
+    <div class="events">
+        <div class="container">
+
+            <div class="event-grids">
+
+                <div class="col-md-6 upcoming">
+                    <h3>Evenements disponible</h3>
+                    {% for e in evenement %}
+                    <div class="family">
+
+                        <div class="twenty">
+                            <h4>{{ e.nbParticipant }}</h4>
+                            <p>Participant</p>
+                        </div>
+                        <div class="sunday">
+                            <h5>{{ e.nom }}</h5>
+
+                            <p>createur: {{ e.createur }} |{{ e.date|date }}</p>
+                            <p>Lieu: {{ e.lieu }}</p>
+
+                        </div>
+
+                            <div class="mor">
+
+                                <a class="more" href="{{ path('afficherEvenement', {'reference': e.reference}) }}">Details</a>
+                            </div>
+
+                        <div class="clearfix"> </div>
+                    </div>
+                    {% endfor %}
+                    <div class="mor">
+
+                        <a class="more" href="{{ path('mesParticipation') }}">Mes participation</a>
+
+                    </div>
+                </div>
+                <div class="col-md-6 keep">
+                    <h3>A Propos de nos evenement</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p>It has survived not only five centuries, but also the leap into electronic typesettingLorem Ipsum is simply dummy text of the printing.</p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+
+        </div>
+    </div>
+    <!--banner-bottom-->
+    <div class="banner-bottom">
+        <div class="container">
+            <ul id="flexiselDemo3">
+                {% for evenement in evenementbest %}
+
+                <li>
+                    <div class="biseller-column">
+                        <div class="banner-grid red">
+                            <h3>Meilleur événement</h3>
+                            <p>{{ evenement.nom }}.</p>
+                            <p>Nombre de participant:{{ evenement.nbParticipant }}</p>
+                            <div class="read-more two"> <a class="read two" href="{{ path('afficherEvenement', {'reference': evenement.reference}) }}">Détails</a></div>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+
+            </ul>
+        </div>
+        <script type="text/javascript">
+            $(window).load(function() {
+                $("#flexiselDemo3").flexisel({
+                    visibleItems:1,
+                    animationSpeed: 1000,
+                    autoPlay: true,
+                    autoPlaySpeed: 3000,
+                    pauseOnHover: true,
+                    enableResponsiveBreakpoints: true,
+                    responsiveBreakpoints: {
+                        portrait: {
+                            changePoint:640,
+                            visibleItems:1
+                        },
+                        landscape: {
+                            changePoint:640,
+                            visibleItems:1
+                        },
+                        tablet: {
+                            changePoint:640,
+                            visibleItems:1
+                        }
+                    }
+                });
+
+            });
+        </script>
+        <script type="text/javascript" src="{{ asset('js/jquery.flexisel.js') }}"></script>
+    </div>
+
+
+{% endblock %}

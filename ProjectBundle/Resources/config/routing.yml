@@ -1,0 +1,164 @@
+project_homepage:
+    path:     /
+    defaults: { _controller: ProjectBundle:Default:index }
+
+
+ajouterEvenement:
+    path:     /ajouterEvenement
+    defaults: { _controller: ProjectBundle:Evenement:ajouterEvenement }
+modifierEvenement:
+    path:     /{reference}/modifierEvenement
+    defaults: { _controller: ProjectBundle:Evenement:modifierEvenement }
+supprimerEvenement:
+    path:     /{reference}/supprimerEvenement
+    defaults: { _controller: ProjectBundle:Evenement:supprimerEvenement }
+afficherListe:
+    path:     /afficherListe
+    defaults: { _controller: ProjectBundle:Evenement:afficherEvenements }
+participerEvenement:
+    path:     /{reference}/participerEvenement
+    defaults: { _controller: ProjectBundle:Reservation:participerEvenement }
+
+abandonnerEvenement:
+    path:     /{reference}/abandonnerEvenement
+    defaults: { _controller: ProjectBundle:Reservation:abandonnerEvenement }
+afficherEvenement:
+    path:     /{reference}/afficherEvenement
+    defaults: { _controller: ProjectBundle:Evenement:afficherEvenement }
+afficherReservations:
+    path:     /afficherReservations
+    defaults: { _controller: ProjectBundle:Reservation:afficherReservation }
+supprimerReservation:
+    path:     /{ref}/supprimerReservation
+    defaults: { _controller: ProjectBundle:Reservation:supprimerReservation }
+mesParticipation:
+    path:     /mesParticipation
+    defaults: { _controller: ProjectBundle:Reservation:affichermesparticipation }
+ajax_search:
+    path:     /search
+    defaults: { _controller: ProjectBundle:Evenement:search }
+    methods:  GET
+ajouterPub:
+    path:     /ajouterPub
+    defaults: { _controller: ProjectBundle:Publication:ajouterPublication }
+afficherPub:
+    path:     /afficherPub
+    defaults: { _controller: ProjectBundle:Publication:afficherPublications }
+ajouterCommentaire:
+    path:     /{id}/ajouterCommentaire
+    defaults: { _controller: ProjectBundle:Commentaire:Commenter }
+aimer:
+    path:     /{reference}/aimer
+    defaults: { _controller: ProjectBundle:Reservation:AimerEvenement }
+dislike:
+    path:     /{reference}/dislike
+    defaults: { _controller: ProjectBundle:Reservation:dislike }
+ajouterReservation:
+    path:     /ajouterReservation
+    defaults: { _controller: ProjectBundle:Reservation:ajouterReservation }
+modifierReservation:
+    path:     /{ref}/modifierReservation
+    defaults: { _controller: ProjectBundle:Reservation:modifierReservation }
+
+project_homepageBack:
+    path:     /back
+    defaults: { _controller: ProjectBundle:Default:index }
+
+project_homepageFront:
+    path:     /front
+    defaults: { _controller: ProjectBundle:Default:indexFront }
+
+project_Temp:
+    path:     /Temp
+    defaults: { _controller: ProjectBundle:Default:Temp }
+
+project_AjouterRef:
+    path:     /AjouterRef
+    defaults: { _controller: ProjectBundle:Default:AjouterRef }
+
+project_AfficherRef:
+    path:     /AfficherRef
+    defaults: { _controller: ProjectBundle:Default:AfficherRef }
+
+project_AfficherRefBack:
+    path:     /AfficherRefBack
+    defaults: { _controller: ProjectBundle:Default:AfficherRefBack }
+
+project_ModifierRef:
+    path:     /ModifierRef/{idref}
+    defaults: { _controller: ProjectBundle:Default:ModifierRef }
+
+project_SupprimerRef:
+    path:     /SupprimerRef/{idref}
+    defaults: { _controller:  ProjectBundle:Default:SupprimerRef }
+
+project_AjouterLog:
+    path:     /AjouterLog
+    defaults: { _controller:  ProjectBundle:logRef:AjouterLog }
+
+project_AfficherLog:
+    path:     /AfficherLog
+    defaults: { _controller:  ProjectBundle:logRef:AfficherLog }
+
+project_AfficherLogBack:
+    path:     /AfficherLogBack
+    defaults: { _controller:  ProjectBundle:logRef:AfficherLogBack }
+
+project_ModifierLog:
+    path:     /ModifierLog/{idlog}
+    defaults: { _controller:  ProjectBundle:logRef:ModifierLog }
+
+project_SupprimerLog:
+    path:     /SupprimerLog/{idlog}
+    defaults: { _controller:  ProjectBundle:logRef:SupprimerLog }
+
+project_payer:
+    path:    /payer
+    defaults: { _controller: ProjectBundle:logRef:payer }
+
+project_opportunity:
+    resource: "@ProjectBundle/Resources/config/routing/opportunity.php"
+    prefix:   /opportunity
+
+project_postulations:
+    resource: "@ProjectBundle/Resources/config/routing/postulations.php"
+    prefix:   /postulations
+
+
+evenement_show:
+    path:     /evenement_show
+    defaults: { _controller: ProjectBundle:Default:show }
+
+ajaxxx_search:
+    path:     /searchh
+    defaults: { _controller: ProjectBundle:Opportunity:search }
+
+vol_menu:
+    path:     /volMenu
+    defaults: { _controller: ProjectBundle:Default:volMenu }
+
+opportunity_search:
+    path:     /opSearch
+    defaults: { _controller: ProjectBundle:Opportunity:opSearch }
+
+opportunity_showVol:
+    path:     /showVol/{id}
+    defaults: { _controller: ProjectBundle:Opportunity:s }
+
+postulations_Success:
+    path:     /success/{id}
+    defaults: { _controller: ProjectBundle:Postulations:success }
+
+postulations_Failure:
+    path:     /failure/{id}
+    defaults: { _controller: ProjectBundle:Postulations:failure }
+
+postulations_accept:
+    path:     /accept/{id}
+    defaults: { _controller: ProjectBundle:Postulations:accept }
+
+postulations_decline:
+    path:     /decline/{id}
+    defaults: { _controller: ProjectBundle:Postulations:decline }
+
+

@@ -1,0 +1,228 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+
+    <!doctype html>
+    <html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>{% block title %}Modifier un Réfugié{% endblock %}</title>
+        <link href="{{ asset('css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+        <!-- Custom Theme files -->
+        <link href="{{ asset('css/style.css') }}" rel='stylesheet' type='text/css' />
+        <script src="{{ asset('js/jquery.min.js') }}"> </script>
+    </head>
+    <body>
+    <form method="post">
+        <div class="container"  align="left" >
+            {{ form_start(form,{'attr':{'novalidate':'novalidate'}}) }}
+
+            {% set class='' %}
+            {% if not form.nomRef.vars.valid %}
+                {% set class='has-error' %}
+            {% endif %}
+            <div class="form-group">
+                <label class="control-label" for="{{ form.nomRef.vars.id}}">Nom Du Réfugié</label>
+                <br>
+                <input type="text"  style="width: 320px" class="form-control" id="{{ form.nomRef.vars.id}}" name="{{  form.nomRef.vars.full_name}}" value="{{  form.nomRef.vars.value}}">
+                {{ form_errors(form.nomRef) }}
+                {% do form.nomRef.setRendered %}
+                {% if not form.nomRef.vars.valid %}
+                    {% for error in form.nomRef.vars.errors  %}
+                        <span class="help-block"></span>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            {% set class='' %}
+            {% if not form.prenomRef.vars.valid %}
+                {% set class='has-error' %}
+            {% endif %}
+            <div class="form-group">
+                <label class="control-label" for="{{ form.prenomRef.vars.id}}">Prénom Du Réfugié</label>
+                <br>
+                <input type="text" style="width: 320px" class="form-control" id="{{ form.prenomRef.vars.id}}" name="{{  form.prenomRef.vars.full_name}}" value="{{  form.prenomRef.vars.value}}">
+                {{ form_errors(form.prenomRef) }}
+                {% do form.prenomRef.setRendered %}
+                {% if not form.prenomRef.vars.valid %}
+                    {% for error in form.prenomRef.vars.errors  %}
+                        <span class="help-block"></span>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            {% set class='' %}
+            {% if not form.ageRef.vars.valid %}
+                {% set class='has-error' %}
+            {% endif %}
+            <div class="form-group">
+                <label class="control-label" for="{{ form.ageRef.vars.id}}">Age Du Réfugié</label>
+                <input type="number" style="width: 320px" class="form-control" id="{{ form.ageRef.vars.id}}" name="{{  form.ageRef.vars.full_name}}" value="{{  form.ageRef.vars.value}}">
+                {{ form_errors(form.ageRef) }}
+                {% do form.ageRef.setRendered %}
+                {% if not form.ageRef.vars.valid %}
+                    {% for error in form.ageRef.vars.errors  %}
+                        <span class="help-block"></span>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            {% set class='' %}
+            {% if not form.genderRef.vars.valid %}
+                {% set class='has-error' %}
+            {% endif %}
+            <div class="form-group">
+                <label class="control-label" for="{{ form.genderRef.vars.id}}">Sexe du Réfugié</label>
+                <br>
+                <br>
+                <input class="form-check-label" type="radio" style="width: 100px" class="form-control" id="{{ form.genderRef.vars.id}}" name="{{  form.genderRef.vars.full_name}}" value="homme">
+                <span>Homme</span>
+                <input class="form-check-label" type="radio" style="width: 100px" class="form-control" id="{{ form.genderRef.vars.id}}" name="{{  form.genderRef.vars.full_name}}" value="femme">
+                <span>Femme</span>
+                {{ form_errors(form.genderRef) }}
+                {% do form.genderRef.setRendered %}
+                {% if not form.genderRef.vars.valid %}
+                    {% for error in form.genderRef.vars.errors  %}
+                        <span class="help-block"></span>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <br>
+            <br>
+
+            {% set class='' %}
+            {% if not form.paysRef.vars.valid %}
+                {% set class='has-error' %}
+            {% endif %}
+            <div class="form-group">
+                <label  class="control-label" for="{{ form.paysRef.vars.id}}">Pays du Réfugié</label>
+                <br>
+                <br>
+                <br>
+                <select class="btn btn-sm btn-outline-primary dropdown-toggle" align="left" type="text" style="width:320px"  class="form-control " id="{{ form.paysRef.vars.id}}" name="{{  form.paysRef.vars.full_name}}" value="{{  form.paysRef.vars.value}}">
+                    <option selected>Choose</option>
+                    <option value="algeria">Algeria</option>
+                    <option value="angola">Angola</option>
+                    <option value="benin">Benin</option>
+                    <option value="botswana">Botswana</option>
+                    <option value="burkina Faso">Burkina Faso</option>
+                    <option value="burundi">Burundi</option>
+                    <option value="cameroon">Cameroon</option>
+                    <option value="cape-verde">Cape Verde</option>
+                    <option value="central-african-republic">Central African Republic</option>
+                    <option value="chad">Chad</option>
+                    <option value="comoros">Comoros</option>
+                    <option value="congo-brazzaville">Congo - Brazzaville</option>
+                    <option value="congo-kinshasa">Congo - Kinshasa</option>
+                    <option value="ivory-coast">Côte d’Ivoire</option>
+                    <option value="djibouti">Djibouti</option>
+                    <option value="egypt">Egypt</option>
+                    <option value="equatorial-guinea">Equatorial Guinea</option>
+                    <option value="eritrea">Eritrea</option>
+                    <option value="ethiopia">Ethiopia</option>
+                    <option value="gabon">Gabon</option>
+                    <option value="gambia">Gambia</option>
+                    <option value="ghana">Ghana</option>
+                    <option value="guinea">Guinea</option>
+                    <option value="guinea-bissau">Guinea-Bissau</option>
+                    <option value="kenya">Kenya</option>
+                    <option value="lesotho">Lesotho</option>
+                    <option value="liberia">Liberia</option>
+                    <option value="libya">Libya</option>
+                    <option value="madagascar">Madagascar</option>
+                    <option value="malawi">Malawi</option>
+                    <option value="mali">Mali</option>
+                    <option value="mauritania">Mauritania</option>
+                    <option value="mauritius">Mauritius</option>
+                    <option value="mayotte">Mayotte</option>
+                    <option value="morocco">Morocco</option>
+                    <option value="mozambique">Mozambique</option>
+                    <option value="namibia">Namibia</option>
+                    <option value="niger">Niger</option>
+                    <option value="nigeria">Nigeria</option>
+                    <option value="rwanda">Rwanda</option>
+                    <option value="reunion">Réunion</option>
+                    <option value="saint-helena">Saint Helena</option>
+                    <option value="senegal">Senegal</option>
+                    <option value="seychelles">Seychelles</option>
+                    <option value="sierra-leone">Sierra Leone</option>
+                    <option value="somalia">Somalia</option>
+                    <option value="south-africa">South Africa</option>
+                    <option value="sudan">Sudan</option>
+                    <option value="south-sudan">Sudan</option>
+                    <option value="swaziland">Swaziland</option>
+                    <option value="Sao-tome-príncipe">São Tomé and Príncipe</option>
+                    <option value="tanzania">Tanzania</option>
+                    <option value="togo">Togo</option>
+                    <option value="uganda">Uganda</option>
+                    <option value="western-sahara">Western Sahara</option>
+                    <option value="zambia">Zambia</option>
+                    <option value="zimbabwe">Zimbabwe</option>
+                </select>
+
+                {{ form_errors(form.paysRef) }}
+                {% do form.paysRef.setRendered %}
+                {% if not form.paysRef.vars.valid %}
+                    {% for error in form.paysRef.vars.errors  %}
+                        <span class="help-block"></span>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <br>
+            <br>
+
+            {% set class='' %}
+            {% if not form.etatRef.vars.valid %}
+                {% set class='has-error' %}
+            {% endif %}
+            <div class="form-group">
+                <label class="control-label" for="{{ form.etatRef.vars.id}}">Etat civil du Réfugié</label>
+                <br>
+                <br>
+                <select class="btn btn-sm btn-outline-primary dropdown-toggle" type="text" align="left" style="width: 320px" class="form-control " id="{{ form.etatRef.vars.id}}" name="{{  form.etatRef.vars.full_name}}" value="{{  form.etatRef.vars.value}}" >
+                    <option selected>Choose</option>
+                    <option value="célibataire">Célibataire</option>
+                    <option value="marié">Marié</option>
+                    <option value="divorcé">Divorcé</option>
+                </select>
+                {{ form_errors(form.etatRef) }}
+                {% do form.etatRef.setRendered %}
+                {% if not form.etatRef.vars.valid %}
+                    {% for error in form.etatRef.vars.errors  %}
+                        <span class="help-block"></span>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+
+        {% set class='' %}
+        {% if not form.image.vars.valid %}
+            {% set class='has-error' %}
+        {% endif %}
+        <div class="form-group">
+            <label class="control-label" for="{{ form.image.vars.id}}">Image Du Réfugié</label>
+            <input type="image" style="width: 320px" class="form-control" id="{{ form.image.vars.id}}" name="{{  form.image.vars.full_name}}" value="{{  form.image.vars.value}}">
+            {{ form_errors(form.image) }}
+            {% do form.image.setRendered %}
+            {% if not form.image.vars.valid %}
+                {% for error in form.image.vars.errors  %}
+                    <span class="help-block"></span>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <div align="center">
+
+
+            <button href="{{ path('project_AjouterRef') }}" type="submit" class="btn btn-success btn-rounded btn-fw" id="submit"  > Modifier </button>
+            {% do form.Ajouter.setRendered %}
+
+
+
+        </div>
+        {{ form_end(form) }}
+        </div>
+    </form>
+    </body>
+    </html>
+{% endblock %}
+
+
