@@ -1,0 +1,119 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+
+{% block content %}
+
+
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+    <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+        .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+        .tg .tg-9wq8{border-color:inherit;text-align:center;vertical-align:middle}
+        .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+        .tg .tg-0lax{text-align:left;vertical-align:top}
+        .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:middle}
+    </style>
+    <table class="tg">
+        <tr>
+            <th class="tg-9wq8" colspan="4"><h1>Opportunity creation</h1></th>
+        </tr>
+        <tr>
+            <td class="tg-0pky">{{ form_label(form.nomop, 'Nom de l opportunité') }}
+                <span  id="misscin">Error</span>
+            </td>
+            <td class="tg-0pky" colspan="3">{{ form_errors(form.nomop) }}
+                {{ form_widget(form.nomop) }}</td>
+        </tr>
+        <tr>
+            <td class="tg-0pky"> {{ form_label(form.domaine) }}</td>
+            <td class="tg-c3ow" colspan="3">{{ form_errors(form.domaine) }}
+                {{ form_widget(form.domaine) }}</td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">{{ form_label(form.descr, 'Description') }}</td>
+            <td class="tg-0pky" colspan="3">{{ form_errors(form.descr) }}
+                {{ form_widget(form.descr) }}</td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">{{ form_label(form.jd, 'Job Description :') }}</td>
+            <td class="tg-0pky" colspan="3">{{ form_errors(form.jd) }}
+                {{ form_widget(form.jd) }}</td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">{{ form_label(form.startDate) }}</td>
+            <td class="tg-0pky" colspan="3">{{ form_errors(form.startDate) }}
+                {{ form_widget(form.startDate) }}</td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">{{ form_label(form.endDate) }}</td>
+            <td class="tg-0pky" colspan="3">{{ form_errors(form.endDate) }}
+                {{ form_widget(form.endDate) }}</td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">{{ form_label(form.limitDate) }}</td>
+            <td class="tg-0pky" colspan="3">{{ form_errors(form.limitDate) }}
+                {{ form_widget(form.limitDate) }}</td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">{{ form_label(form.adr, 'Adresse :') }}</td>
+            <td class="tg-0pky" colspan="3">{{ form_errors(form.adr) }}
+                {{ form_widget(form.adr) }}</td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">Image preview :</td>
+            <td class="tg-0pky"></td>
+            <td class="tg-0pky"></td>
+            <td class="tg-0lax"></td>
+        </tr>
+        <tr>
+            <td class="tg-0lax">Veuillez 3 images :</td>
+            <td class="tg-0lax">{{ form_label(form.img1, 'Image 1 ') }} {{ form_errors(form.img1) }}
+                {{ form_widget(form.img1) }}</td>
+            <td class="tg-0lax">{{ form_label(form.img2, 'Image 2 ') }}{{ form_errors(form.img2) }}
+                {{ form_widget(form.img2) }}</td>
+            <td class="tg-0lax">{{ form_label(form.img3, 'Image 3 ') }}{{ form_errors(form.img3) }}
+                {{ form_widget(form.img3) }}</td>
+        </tr>
+        <tr>
+            <th class="tg-9wq8" colspan="4"><h1> <input type="submit" class="create" value="Create" id="bouton"></h1></th>
+        </tr>
+    </table>
+
+
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('opportunity_new') }}">Back to the list</a>
+        </li>
+    </ul>
+
+    <script>
+
+        $('#misscin').hide();
+        $('#projectbundle_opportunity_nomop').keyup(function () {
+
+
+            var re = /^[a-zA-Z \t]{1,}$/i;
+            var x = $('#projectbundle_opportunity_nomop').val();
+            if (re.test(x)) {
+
+                $('#bouton').prop('disabled', false);
+                $('#misscin').hide();
+                $('#projectbundle_opportunity_nomop').css('border', "2px  solid #29FF2B");
+
+            } else {
+
+                $('#misscin').show();
+                $('#projectbundle_opportunity_nomop').css('border', "2px solid #db4848");
+
+
+                $('#bouton').prop('disabled', true);
+            }
+        })
+</script>
+{% endblock %}

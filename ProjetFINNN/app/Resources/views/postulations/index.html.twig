@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Postulations list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Etatpos</th>
+                <th>Cv</th>
+                <th>Motivation</th>
+                <th>Domaineetudes</th>
+                <th>Experience</th>
+                <th>Lvleng</th>
+                <th>Lvlfr</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for postulation in postulations %}
+            <tr>
+                <td><a href="{{ path('postulations_show', { 'id': postulation.id }) }}">{{ postulation.id }}</a></td>
+                <td>{% if postulation.etatPos == 1 %}
+                En cours
+                    {% elseif postulation.etatPos == 2 %}
+                     Accepté
+                    {% elseif postulation.etatPos == 3 %}
+                     Refusé
+                {% endif %}
+                </td>
+                <td>{{ postulation.cv }}</td>
+                <td>{{ postulation.motivation }}</td>
+                <td>{{ postulation.domaineEtudes }}</td>
+                <td>{{ postulation.experience }}</td>
+                <td>{{ postulation.lvlEng }}</td>
+                <td>{{ postulation.lvlFr }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('postulations_show', { 'id': postulation.id }) }}">show</a>
+                        </li>
+
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

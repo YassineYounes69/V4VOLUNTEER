@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Postulation refusée avec succées</h1>
+
+
+
+    <ul>
+        <li>
+            <a href="{{ path('postulations_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('postulations_show', { 'id': postulation.id }) }}">Retours vers la postulation</a>
+        </li>
+    </ul>
+{% endblock %}
