@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Postulation</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ postulation.id }}</td>
+            </tr>
+            <tr>
+                <th>Etatpos</th>
+                <td>{% if postulation.etatPos == 1 %}
+                        En cours
+                    {% elseif postulation.etatPos == 2 %}
+                        Accepté
+                    {% elseif postulation.etatPos == 3 %}
+                        Refusé
+                    {% endif %}</td>
+            </tr>
+            <tr>
+                <th>Cv</th>
+                <td>{{ postulation.cv }}</td>
+            </tr>
+            <tr>
+                <th>Motivation</th>
+                <td>{{ postulation.motivation }}</td>
+            </tr>
+            <tr>
+                <th>Domaineetudes</th>
+                <td>{{ postulation.domaineEtudes }}</td>
+            </tr>
+            <tr>
+                <th>Experience</th>
+                <td>{{ postulation.experience }}</td>
+            </tr>
+            <tr>
+                <th>Lvleng</th>
+                <td>{{ postulation.lvlEng }}</td>
+            </tr>
+            <tr>
+                <th>Lvlfr</th>
+                <td>{{ postulation.lvlFr }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('postulations_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('postulations_edit', { 'id': postulation.id }) }}">Edit</a>
+        </li>
+        <li>
+            <a href="{{ path('postulations_accept', { 'id': postulation.id }) }}">Accepter</a>
+        </li>
+        <li>
+            <a href="{{ path('postulations_decline', { 'id': postulation.id }) }}">Refuser</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

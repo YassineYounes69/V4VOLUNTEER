@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="clearfix"></div>
+    <div class="banner two">
+        <h2>Faire un don</h2>
+    </div>
+
+
+
+
+
+<div class="donations">
+    <div class="container">
+        <div class="col-md-8 donate-right">
+            <div class="donate-top">
+    {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+        {{ form_widget(form) }}
+                {{ form_errors (form) }}
+                <br>
+        <input type="submit" value="Faire un don" />
+    {{ form_end(form) }}
+                <br>
+                <br>
+                <br>
+
+
+
+
+
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <span class="button"><a class="read trd" href="{{ path('demande_index') }}">Retour à la liste</a></span>
+
+    </div>
+
+</div>
+
+{% endblock %}
