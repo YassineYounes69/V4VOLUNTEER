@@ -1,0 +1,145 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+
+    <div class="clearfix"></div>
+    </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="banner two">
+        <h2>Espace D'inscription</h2>
+
+    </div>
+    </div>
+    <!--banner-bottom-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <div class="container">
+        <div class="row" style="margin-bottom: 50px; margin-top: 50px">
+            <div class="col-md-4 col-sm-4"></div>
+
+
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">Sign Up</div>
+                    <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="/accounts/login/">Sign In</a></div>
+                </div>
+                <div class="panel-body" >
+                    <form method="post" action=".">
+                        <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
+
+
+                        <form  class="form-horizontal" method="post" >
+                            <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
+
+                            <div id="div_id_username" class="form-group required">
+                                <label for="id_username" class="control-label col-md-4  requiredField"> Nom<span class="asteriskField">*</span> </label>
+                                <div class="controls col-md-8 ">
+                                    {{ form_widget(form.nom, { 'attr': {'class': 'input-md textinput textInput form-control'}} ) }}
+
+                                </div>
+                            </div>
+                            <div id="div_id_email" class="form-group required">
+                                <label for="id_email" class="control-label col-md-4  requiredField"> Prénom<span class="asteriskField">*</span> </label>
+                                <div class="controls col-md-8 ">
+                                    {{ form_widget(form.prenom, { 'attr': {'class': 'input-md textinput textInput form-control'}} ) }}
+
+                                </div>
+                            </div>
+                            <div id="div_id_password1" class="form-group required">
+                                <label for="id_password1" class="control-label col-md-4  requiredField">Adresse<span class="asteriskField">*</span> </label>
+                                <div class="controls col-md-8 ">
+                                    {{ form_widget(form.addresse, { 'attr': {'class': 'input-md textinput textInput form-control'}} ) }}
+                                </div>
+                                </div>
+                            <div id="div_id_password2" class="form-group required">
+                                <label for="id_password2" class="control-label col-md-4  requiredField"> Pays<span class="asteriskField">*</span> </label>
+                                <div class="controls col-md-8 ">
+                                    {{ form_widget(form.pays, { 'attr': {'class':'input-md textinput textInput form-control'}} ) }}
+                                </div>
+                            </div>
+                            <div id="div_id_name" class="form-group required">
+                                <label for="id_name" class="control-label col-md-4  requiredField"> Code Postal<span class="asteriskField">*</span> </label>
+                                <div class="controls col-md-8 ">
+                                    {{ form_widget(form.codePostal, { 'attr': {'class':'input-md textinput textInput form-control'}} ) }}
+                                </div>
+                            </div>
+
+                            <div id="div_id_company" class="form-group required">
+                                <label for="id_company" class="control-label col-md-4  requiredField"> Téléphone<span class="asteriskField">*</span> </label>
+                                <div class="controls col-md-8 ">
+                                    {{ form_widget(form.tel, { 'attr': {'class':'input-md textinput textInput form-control'}} ) }}
+                            </div>
+                            <div id="div_id_catagory" class="form-group required">
+                                <label for="id_catagory" class="control-label col-md-4  requiredField"> E-mail<span class="asteriskField">*</span> </label>
+                                <div class="controls col-md-8 ">
+                                    {{ form_widget(form.email, { 'attr': {'class':'input-md textinput textInput form-control'}} ) }}
+                                </div>
+                            </div>
+                            <div id="div_id_number" class="form-group required">
+                                <label for="id_number" class="control-label col-md-4  requiredField"> Rôle<span class="asteriskField">*</span> </label>
+                                <div class="controls col-md-8 ">
+                                    {{ form_widget(form.roles, { 'attr': {'class':'input-md textinput textInput form-control'}} ) }}
+                                </div>
+                            </div>
+                                <div id="div_id_location" class="form-group required">
+                                    <label for="id_location" class="control-label col-md-4  requiredField"> Nom d'utlisateur<span class="asteriskField">*</span> </label>
+                                    <div class="controls col-md-8 ">
+                                        {{ form_widget(form.username, { 'attr': {'class':'input-md textinput textInput form-control'}} ) }}
+                                    </div>
+                                </div>
+                            <div id="div_id_location" class="form-group required">
+                                <label for="id_location" class="control-label col-md-4  requiredField"> Mot de passe<span class="asteriskField">*</span> </label>
+                                <div class="controls col-md-8 ">
+                                    {{ form_widget(form.plainPassword.first, { 'attr': {'class':'input-md textinput textInput form-control'}} ) }}
+                                </div>
+                            </div>
+                                <div id="div_id_location" class="form-group required">
+                                    <label for="id_location" class="control-label col-md-4  requiredField"> Mot de passe<span class="asteriskField">*</span> </label>
+                                    <div class="controls col-md-8 ">
+                                        {{ form_widget(form.plainPassword.second, { 'attr': {'class':'input-md textinput textInput form-control'}} ) }}
+                                    </div>
+                                    </div>
+
+                            <div id="div_id_location" class="form-group required">
+                                <label for="id_location" class="control-label col-md-4  requiredField">Confirmer<span class="asteriskField">*</span> </label>
+                                <div class="controls col-md-8 ">
+
+                            </div>
+
+                            <div class="form-group">
+                                <div class="aab controls col-md-4 "></div>
+                                <div class="controls col-md-8 ">
+                                    <input type="submit" name="Signup" value="{{ 'registration.submit'|trans }}" class="btn btn-primary btn btn-info" id="submit-id-signup" />
+                                </div>
+                            </div>
+                                {{ form_end(form) }}
+                        </form>
+
+                    </form>
+
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    <!--swipebox -->
+    <link rel="stylesheet" href="css/swipebox.css">
+    <script src="js/jquery.swipebox.min.js"></script>
+    <script type="text/javascript">
+        jQuery(function($) {
+            $(".swipebox").swipebox();
+        });
+    </script>
+    <!--banner-bottom-->
+    <svg id="bigTriangleShadow" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path id="trianglePath5" d="M0 0 L50 100 L100 0 Z"></path>
+        <path id="trianglePath6" d="M50 100 L100 40 L100 0 Z"></path>
+    </svg>
+
+{% endblock  %}
