@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="clearfix"></div>
+    </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="banner two">
+        <h2>Modifier une reservation</h2>
+
+    </div>
+    </div>
+    <!--banner-bottom-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <form class="form-horizontal" action='' method="POST">
+        <fieldset>
+            <div class="row" style="margin-bottom: 50px; margin-top: 50px">
+                <div class="col-md-4 col-sm-4"></div>
+                <div class="col-md-4 col-sm-4 mt-4">
+                    {{ form_start(f, { 'attr': {'novalidate': 'novalidate'}} ) }}
+                    <div id="legend">
+                        <legend class="">Modifier reservation</legend>
+                    </div>
+
+
+
+                    <div class="control-group">
+                        <!-- Username -->
+                        <label class="control-label"  for="username">volontaire</label>
+                        <div class="controls">
+                            {{ form_widget(f.idUser, { 'attr': {'class': 'input-xlarge'}} ) }}
+                            <span>{{ form_errors(f.idUser) }}</span>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <!-- E-mail -->
+                        <label class="control-label" for="email">Evénement</label>
+                        <div class="controls">
+                            {{ form_widget(f.idEvenement, { 'attr': {'class': 'input-xlarge'}} ) }}
+                            <span>{{ form_errors(f.idEvenement) }}</span>
+
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <!-- Button -->
+                        <div class="controls">
+                            <button class="btn btn-success" type="submit" id="submit">Confirmer</button>
+                        </div>
+                    </div>
+                    {{ form_end(f) }}
+        </fieldset>
+        </div>
+    </form>
+
+{% endblock %}

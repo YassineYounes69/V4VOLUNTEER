@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+{% block content %}
+    <a href="{{ path('stat') }}" > Statistique totale</a>
+    <br>
+    <a href="{{ path('statByUser') }}" > Statistique du {{ u }}
+    <br>
+    <a href="{{ path('LesVolontaires') }}" >Classification des Volentaires</a>
+    <br>
+    <a href="{{ path('Calcul') }}" >Calcul Total Des Dons</a>
+    <br>
+    <a href="{{ path('CalculByUser') }}" >Calcul Des Dons par Volentaire</a>
+
+
+{% endblock %}

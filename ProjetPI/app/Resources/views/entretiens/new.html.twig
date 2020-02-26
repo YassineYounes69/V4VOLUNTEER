@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block content %}
+
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script language = "javascript">
+
+        $(document).ready(function(){
+
+            /*$("#apply").click(function(){
+
+                $r=$("#bouton").val();
+                $.ajax({
+                    url:        "
+                    type:       'GET',
+                    dataType:   'json',
+                    async:      true,
+
+                    success: function(data) {
+                        if(data['success']){
+                            alert('zok ommok');
+                        }
+                    },
+                    error : function(xhr, textStatus, errorThrown) {
+                        alert('Ajax request failed.');
+                    }
+                });
+
+            })*/
+        });
+
+    </script>
+    <table>
+        <tr>
+            <th> {{ form_label(form.dateEnt, 'Date de l entretien :') }}</th>
+            <th>{{ form_errors(form.dateEnt) }}
+                {{ form_widget(form.dateEnt) }}</th>
+            <th><input type="submit" class="create" value="Réserver" id="bouton"></th>
+        </tr>
+    </table>
+
+
+    {{ form_end(form) }}
+    {% if test is defined %}
+        <script> alert("Vous avez déja réservé pour cette opportunité")</script>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7a4897e7-59f9-4b7a-89e6-7b56a88c26b9" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="d5de6064-6acb-404c-9932-794658fa4af4" />
+    </execution>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/incenteev/composer-parameter-handler" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/cmen/google-charts-bundle" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1XTGVTNB7N7KRqgT7f7eXwlWJqw" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ProjetPiFinal" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ProjetPI\web\uploads\post" />
+      <recent name="C:\wamp64\www\ProjetPI\web\cssNgoMenu" />
+      <recent name="C:\wamp64\www\ProjetPI\web\fonts" />
+      <recent name="C:\wamp64\www\ProjetPI\web\images" />
+      <recent name="C:\wamp64\www\ProjetPI\web\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ProjetPI\app\Resources\views\postulations" />
+      <recent name="C:\wamp64\www\ProjetPI\app\Resources\views" />
+      <recent name="C:\wamp64\www\ProjetPI\src\ProjectBundle\Resources\views" />
+      <recent name="C:\wamp64\www\ProjetPI\web" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="c dump-autoload" />
+      <command value="s generate:bundle" />
+      <command value="s doctrine:generate:crud" />
+      <command value="s doctrine:generate:form" />
+      <command value="s doctrine:generate:form ProjectBundle:Evenement" />
+      <command value="s doctrine:generate:entity" />
+      <command value="s server:run" />
+      <command value="s doctrine:database:create" />
+      <command value="s doctrine:schema:create" />
+      <command value="s doctrine:generate:crud Opportunity.php" />
+      <command value="s doctrine:generate:crud Postulations.php" />
+      <command value="debug" />
+      <command value="cache clear" />
+      <command value="php:list" />
+      <command value="s generate:controller" />
+      <command value="s doctrine:generate:form ProjectBundle:Entretien" />
+      <command value="s doctrine:schema:update --force" />
+      <command value="s debug:router" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a4897e7-59f9-4b7a-89e6-7b56a88c26b9" name="Default Changelist" comment="" />
+      <created>1581062695641</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581062695641</updated>
+      <workItem from="1581063095845" duration="5351000" />
+      <workItem from="1581157659092" duration="2706000" />
+      <workItem from="1581160405273" duration="4078000" />
+      <workItem from="1581182922218" duration="7647000" />
+      <workItem from="1581242214424" duration="3044000" />
+      <workItem from="1581245800962" duration="4484000" />
+      <workItem from="1581260430386" duration="5589000" />
+      <workItem from="1581274646143" duration="18638000" />
+      <workItem from="1581295927176" duration="1057000" />
+      <workItem from="1581320339874" duration="7985000" />
+      <workItem from="1581339035177" duration="16774000" />
+      <workItem from="1581357856348" duration="1309000" />
+      <workItem from="1581362341126" duration="8311000" />
+      <workItem from="1581410109468" duration="446000" />
+      <workItem from="1581422143998" duration="1461000" />
+      <workItem from="1581427677705" duration="1991000" />
+      <workItem from="1581453990622" duration="27000" />
+      <workItem from="1581454117828" duration="3137000" />
+      <workItem from="1581463235639" duration="7736000" />
+      <workItem from="1581496758158" duration="4892000" />
+      <workItem from="1581631559387" duration="21780000" />
+      <workItem from="1581868088976" duration="6698000" />
+      <workItem from="1581887920280" duration="18386000" />
+      <workItem from="1581943368297" duration="368000" />
+      <workItem from="1581954385052" duration="242000" />
+      <workItem from="1581960808775" duration="28047000" />
+      <workItem from="1582045586610" duration="759000" />
+      <workItem from="1582048937298" duration="33120000" />
+      <workItem from="1582087992165" duration="9289000" />
+      <workItem from="1582099622813" duration="1926000" />
+      <workItem from="1582102271578" duration="416000" />
+      <workItem from="1582541886318" duration="2762000" />
+      <workItem from="1582573691364" duration="25430000" />
+      <workItem from="1582604555444" duration="906000" />
+      <workItem from="1582635184013" duration="9758000" />
+      <workItem from="1582650629995" duration="31933000" />
+      <workItem from="1582692641897" duration="7412000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

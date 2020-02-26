@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <link rel="stylesheet" href="{{ asset('CssCarousel/css.css') }}">
+
+    <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+        .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+        .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+        .tg .tg-0lax{text-align:left;vertical-align:top}
+        .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+    </style>
+    <table class="tg">
+        <tr>
+            <th class="tg-c3ow" colspan="4"><h1>{{ opportunity.nomop }}</h1>({{ opportunity.domaine }})</th>
+
+        </tr>
+        <tr>
+            <td class="tg-0pky">Description :</td>
+            <td class="tg-0pky" colspan="3">{{ opportunity.descr }}</td>
+
+        </tr>
+        <tr>
+            <td class="tg-0pky">Job Description :</td>
+            <td class="tg-0pky"colspan="3">{{ opportunity.jd }}</td>
+
+        </tr>
+        <tr>
+            <td class="tg-0pky">Periode :</td>
+            <td class="tg-0pky">{% if opportunity.startDate %}{{ opportunity.startDate|date('Y-m-d') }}{% endif %}</td>
+            <td class="tg-0pky">to</td>
+            <td class="tg-0lax">{% if opportunity.endDate %}{{ opportunity.endDate|date('Y-m-d') }}{% endif %}</td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">Date limite de postulation :<br></td>
+            <td class="tg-0pky" colspan="3">{% if opportunity.limitDate %}{{ opportunity.limitDate|date('Y-m-d') }}{% endif %}</td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">Adresse :</td>
+            <td class="tg-0pky" colspan="3">{{ opportunity.adr }}</td>
+        </tr>
+        <tr>
+            <td class="tg-0pky">Images :</td>
+            <td class="tg-0pky" colspan="3"><div class="container">
+                    <div class="carousel">
+                        <input type="radio" id="carousel-1" name="carousel[]" checked>
+                        <input type="radio" id="carousel-2" name="carousel[]">
+                        <input type="radio" id="carousel-3" name="carousel[]">
+                        <ul class="carousel__items">
+                            <li class="carousel__item"><img src="{{ asset('uploads/post/' ~ opportunity.img1) }}" alt=""></li>
+                            <li class="carousel__item"><img src="{{ asset('uploads/post/' ~ opportunity.img2) }}" alt=""></li>
+                            <li class="carousel__item"><img src="{{ asset('uploads/post/' ~ opportunity.img3) }}" alt=""></li>
+                        </ul>
+                        <div class="carousel__prev">
+                            <label for="carousel-1"></label>
+                            <label for="carousel-2"></label>
+                            <label for="carousel-3"></label>
+                        </div>
+                        <div class="carousel__next">
+                            <label for="carousel-1"></label>
+                            <label for="carousel-2"></label>
+                            <label for="carousel-3"></label>
+                        </div>
+                        <div class="carousel__nav">
+                            <label for="carousel-1"></label>
+                            <label for="carousel-2"></label>
+                            <label for="carousel-3"></label>
+                        </div>
+                    </div>
+                </div></td>
+        </tr>
+        <tr>
+            {% if userType == "asso" %}
+                <td class="tg-0pky"><a href="{{ path('opportunity_new') }}">Back to the list</a></td>
+            {% elseif userType == "volun" %}
+                <td class="tg-0pky"><a href="{{ path('opportunity_search') }}">Back to the list</a></td>
+            {% endif %}
+            {% if userType == "asso" %}
+                <td class="tg-0pky" colspan="2"><a href="{{ path('opportunity_edit', { 'id': opportunity.id }) }}">Edit</a></td>
+            {% elseif userType == "volun" %}
+                <td class="tg-0pky"><a href="{{ path('postulations_new', { 'id': opportunity.id }) }}">Postuler</a></td>
+            {% endif %}
+            {% if userType == "asso" %}
+            <td class="tg-0lax">{{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+                {{ form_end(delete_form) }}</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <td class="tg-0lax" colspan="4">aa</td>
+        </tr>
+    </table>
+<br>
+
+
+
+{% endblock %}

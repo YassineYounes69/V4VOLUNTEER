@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Postulation</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Etat Postulation</th>
+                <td>{% if postulation.etatPos == 1 %}
+                        En cours
+                    {% elseif postulation.etatPos == 2 %}
+                        Accepté
+                    {% elseif postulation.etatPos == 3 %}
+                        Refusé
+                    {% endif %}</td>
+            </tr>
+            <tr>
+                <th>Présentation </th>
+                <td>{{ postulation.presentation }}</td>
+            </tr>
+            <tr>
+                <th>Pourquoi il a choisi cette opportunité </th>
+                <td>{{ postulation.choice }}</td>
+            </tr>
+            <tr>
+                <th>La pour laquelle le volontaire veut vivre une experience volontaire </th>
+                <td>{{ postulation.reason }}</td>
+            </tr>
+            <tr>
+                <th>Pourquoi devrais-on le choisir ?</th>
+                <td>{{ postulation.chooseYou }}</td>
+            </tr>
+            <tr>
+                <th>Niveau en Anglais : </th>
+                <td>{{ postulation.lvlEng }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('postulations_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('postulations_edit', { 'id': postulation.id }) }}">Edit</a>
+        </li>
+        <li>
+            <a href="{{ path('postulations_accept', { 'id': postulation.id }) }}">Accepter</a>
+        </li>
+        <li>
+            <a href="{{ path('postulations_decline', { 'id': postulation.id }) }}">Refuser</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
