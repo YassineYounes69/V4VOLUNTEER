@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="638.0" prefWidth="1036.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIControllers.AfflogController">
+    <children>
+      <TableView fx:id="afflogement" layoutX="376.0" layoutY="222.0" prefHeight="327.0" prefWidth="623.0" stylesheets="@dark-theme.css">
+        <columns>
+            <TableColumn fx:id="nom_log" prefWidth="168.0" text="Nom Logement " />
+            <TableColumn fx:id="add_log" minWidth="5.0" prefWidth="143.0" text="Adresse" />
+            <TableColumn fx:id="nb_log" minWidth="0.0" prefWidth="185.0" text="Nombre De Chambres" />
+            <TableColumn fx:id="etat_log" prefWidth="125.0" text="Etat" />
+        </columns>
+      </TableView>
+      <Button fx:id="chercher_log" layoutX="693.0" layoutY="71.0" mnemonicParsing="false" onAction="" prefHeight="42.0" prefWidth="106.0" style="-fx-background-color: blue; -fx-background-radius: 100;" text="Chercher" textFill="#fff8f8" />
+      <TextField fx:id="textaff" layoutX="376.0" layoutY="75.0" onKeyTyped="" prefHeight="34.0" prefWidth="192.0" promptText="Taper l'adresse" />
+      <Button fx:id="stat_log" layoutX="879.0" layoutY="39.0" mnemonicParsing="false" onAction="" prefHeight="26.0" prefWidth="120.0" text="Statistique" />
+      <Button fx:id="rapport_log" layoutX="879.0" layoutY="107.0" mnemonicParsing="false" onAction="" prefHeight="26.0" prefWidth="120.0" text="Rapport" />
+      <Label layoutX="562.0" layoutY="153.0" text="Liste Des Logements">
+         <font>
+            <Font name="Ink Free" size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="ajoulog" layoutX="376.0" layoutY="584.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="98.0" text="Ajouter" />
+      <Button fx:id="modlog" layoutX="648.0" layoutY="584.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="98.0" text="Modifier" />
+      <Button fx:id="supplog" layoutX="901.0" layoutY="584.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="98.0" text="Supprimer" />
+      <TextField fx:id="log_nom" layoutX="65.0" layoutY="251.0" />
+      <Text layoutX="65.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" />
+      <Text layoutX="70.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse" />
+      <TextField fx:id="log_address" layoutX="65.0" layoutY="335.0" />
+      <TextField fx:id="nb_log" layoutX="65.0" layoutY="420.0" />
+      <Text layoutX="67.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de chambres" />
+   </children>
+    
+    
+</AnchorPane>
