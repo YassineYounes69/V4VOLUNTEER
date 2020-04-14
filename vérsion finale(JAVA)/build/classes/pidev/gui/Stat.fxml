@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="776.0" prefWidth="1123.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.gui.StatController">
+   <children>
+      <PieChart fx:id="pieChart" layoutX="90.0" layoutY="134.0" prefHeight="557.0" prefWidth="944.0" />
+      <Label layoutX="202.0" layoutY="24.0" prefHeight="84.0" prefWidth="686.0" text="Statistiques des donations " textFill="#d31010">
+         <font>
+            <Font size="57.0" />
+         </font>
+      </Label>
+      <Button layoutX="1002.0" layoutY="25.0" mnemonicParsing="false" onAction="#retourPushed" prefHeight="57.0" prefWidth="90.0" text="Return" textFill="#220d02" />
+   </children>
+</AnchorPane>
