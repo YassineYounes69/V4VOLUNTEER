@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resource majorVersion="1" minorVersion="11" useXmlUI="false">
+    <image name="activation-background.jpg"  />
+    <image name="animal.jpg"  />
+    <image name="animal1.jpg"  />
+    <image name="confirmation-background.jpg"  />
+    <image name="dog.jpg"  />
+    <image name="evenement.jpg"  />
+    <image name="evenement1.jpg"  />
+    <image name="Evenement2.jpg"  />
+    <image name="event.jpg"  />
+    <image name="hd.png"  />
+    <image name="high.png"  />
+    <image name="login-user-icon.png"  />
+    <image name="low.png"  />
+    <image name="medium.png"  />
+    <image name="news-item-1.jpg"  />
+    <image name="news-item-2.jpg"  />
+    <image name="news-item-3.jpg"  />
+    <image name="news-item-4.jpg"  />
+    <image name="news-item.jpg"  />
+    <image name="partyy2.png"  />
+    <image name="profile-background.jpg"  />
+    <image name="signin-background.jpg"  />
+    <image name="signup-background.jpg"  />
+    <image name="soir&#xe9;e.png"  />
+    <theme name="Theme">
+        <val key="@includeNativeBool" value="true" />
+    </theme>
+    <image name="timeline-background.jpg"  />
+    <image name="veryhigh.png"  />
+    <image name="verylow.png"  />
+    <image name="Vieille.jpg"  />
+    <image name="welcome-background.jpg"  />
+</resource>
