@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="Form" name="aj" cloudDestinationProperty="aj" >
+  <component type="Label" name="Label" cloudDestinationProperty="Label" text="Label" >
+  </component>
+  <component type="SpanButton" name="SpanButton" cloudDestinationProperty="SpanButton" >
+  </component>
+  <component type="Button" name="Button" cloudDestinationProperty="Button" text="lllllllllllll" >
+  </component>
+  <component type="RadioButton" name="RadioButton" cloudDestinationProperty="RadioButton" text="RadioButton" >
+  </component>
+</component>
