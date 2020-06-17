@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Agee</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ agee.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ agee.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ agee.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>{{ agee.age }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ agee.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Donation</th>
+                <td>{{ agee.donation }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('agee_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('agee_edit', { 'id': agee.id }) }}">Modifier</a>
+        </li>
+        <li>
+            <a href="{{ path('agee_delete', { 'id': agee.id }) }}">Supprimer</a>
+        </li>
+    </ul>
+{% endblock %}

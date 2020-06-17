@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="main" prefHeight="590.0" prefWidth="1014.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.gui.Add_demandeController">
+    <stylesheets>
+        <URL value="@add_demande.css" />
+    </stylesheets>
+   <children>
+      <ImageView fx:id="background" fitHeight="720.0" fitWidth="1147.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/don.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="titre_demande" layoutX="573.0" layoutY="179.0" prefHeight="47.0" prefWidth="422.0" />
+      <TextArea fx:id="description_demande" layoutX="573.0" layoutY="243.0" prefHeight="200.0" prefWidth="422.0" />
+      <HBox fx:id="group" layoutX="563.0" layoutY="471.0" prefHeight="47.0" prefWidth="528.0" spacing="20.0">
+         <children>
+            <RadioButton fx:id="vetements" mnemonicParsing="false" text="vetements">
+               <toggleGroup>
+                  <ToggleGroup fx:id="type" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="nourriture" mnemonicParsing="false" text="nourriture" toggleGroup="$type" />
+            <RadioButton fx:id="fourniture_scolaire" mnemonicParsing="false" text="fourniture scolaire" toggleGroup="$type" />
+            <RadioButton fx:id="materiel" mnemonicParsing="false" text="materiel" toggleGroup="$type" />
+         </children>
+      </HBox>
+      <TextField fx:id="recherche" layoutX="690.0" layoutY="52.0" prefHeight="47.0" prefWidth="384.0" />
+      <Label layoutX="331.0" layoutY="188.0" prefHeight="30.0" prefWidth="62.0" text="Titre">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="331.0" layoutY="257.0" text="Description">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="331.0" layoutY="474.0" prefHeight="30.0" prefWidth="76.0" text="Type">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="ajout" layoutX="885.0" layoutY="626.0" mnemonicParsing="false" onAction="#add_demande" prefHeight="38.0" prefWidth="155.0" text="AJOUTER" />
+      <Button fx:id="accueil" layoutX="-1.0" layoutY="304.0" mnemonicParsing="false" opacity="0.0" prefHeight="47.0" prefWidth="215.0" text="accueil" />
+      <Button fx:id="donation" layoutX="-1.0" layoutY="359.0" mnemonicParsing="false" opacity="0.0" prefHeight="47.0" prefWidth="215.0" text="donation" />
+      <Button fx:id="evenements" layoutX="-1.0" layoutY="412.0" mnemonicParsing="false" onAction="#evenementPushed" opacity="0.0" prefHeight="47.0" prefWidth="215.0" text="evenements" />
+      <Button fx:id="refugies" layoutX="-1.0" layoutY="465.0" mnemonicParsing="false" opacity="0.0" prefHeight="47.0" prefWidth="215.0" text="refugies" />
+      <Button fx:id="opportunites" layoutX="-2.0" layoutY="520.0" mnemonicParsing="false" opacity="0.0" prefHeight="47.0" prefWidth="215.0" text="opportunites" />
+      <Button fx:id="personnes_agees" layoutX="2.0" layoutY="571.0" mnemonicParsing="false" opacity="0.0" prefHeight="47.0" prefWidth="215.0" text="personnes agees" />
+      <Button fx:id="deconnecter" layoutX="1.0" layoutY="621.0" mnemonicParsing="false" opacity="0.0" prefHeight="47.0" prefWidth="215.0" text="deconnecter" />
+      <Label layoutX="333.0" layoutY="548.0" text="Image">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="image_demande" layoutX="574.0" layoutY="544.0" prefHeight="47.0" prefWidth="254.0" />
+      <Button fx:id="selectionner" layoutX="840.0" layoutY="544.0" mnemonicParsing="false" onMouseClicked="#selectionner_image" prefHeight="47.0" prefWidth="155.0" text="Selectionner" />
+      <Button fx:id="donation" layoutX="5.0" layoutY="348.0" mnemonicParsing="false" onAction="#toDonations" opacity="0.0" prefHeight="55.0" prefWidth="207.0" text="Button" />
+      <Button fx:id="back" layoutX="35.0" layoutY="50.0" mnemonicParsing="false" onAction="#toBack" opacity="0.0" prefHeight="124.0" prefWidth="134.0" text="Button" />
+      <Button fx:id="home" layoutX="2.0" layoutY="299.0" mnemonicParsing="false" onAction="#toHome" opacity="0.0" prefHeight="49.0" prefWidth="208.0" text="Button" />
+   </children>
+</AnchorPane>

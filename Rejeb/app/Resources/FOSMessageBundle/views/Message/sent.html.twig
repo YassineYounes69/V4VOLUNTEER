@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <!--banner-bottom-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!--banner-bottom-->
+
+
+
+
+
+    <div class="row" style="margin-bottom: 50px; margin-top: 50px">
+    <div class="sub-banner">
+        <div class="overlay">
+            <div class="container">
+                <div class="breadcrumb-area">
+                    <div class="top">
+                        <h1>My Profile</h1>
+                    </div>
+                    <ul class="breadcrumbs">
+                        <li><a href="{{ path('homepage') }}">Home</a></li>
+                        <li class="active">My Profile</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-profile">
+    <div class="container">
+
+
+
+    <div class="col-lg-6 col-md-6 col-sm-5">
+    <!-- My address start-->
+    <div class="my-address">
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="">
+            <a class="tab-annonce btn" href="{{ path('fos_message_inbox') }}"
+               style="font-weight: bold">Inbox</a>
+        </li>
+
+        <li role="presentation">
+            <a class="tab-annonce btn" href="{{ path('fos_message_sent') }}"
+               style="font-weight: bold">Envoyé</a>
+        </li>
+        <li role="presentation">
+            <a class="tab-annonce btn" href="{{ path('fos_message_deleted') }}"
+               style="font-weight: bold">Supprimé</a>
+        </li>
+    </ul>
+    </div>
+{% block fos_message_content %}
+
+<h2>{% trans from 'FOSMessageBundle' %}sent{% endtrans %}</h2>
+
+    {% include '@FOSMessage/Message/threads_list.html.twig' with {'threads': threads} %}
+
+
+
+{% endblock %}
+{% endblock %}

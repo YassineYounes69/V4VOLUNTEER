@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="main" prefHeight="590.0" prefWidth="1014.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.gui.Demande_adminController">
+    <stylesheets>
+        <URL value="@demande_admin.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="685.0" fitWidth="1157.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/admin.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="rechercher_demande" layoutX="552.0" layoutY="57.0" mnemonicParsing="false" opacity="0.0" prefHeight="49.0" prefWidth="60.0" text="Button" />
+      <TextField fx:id="search_demande" layoutX="704.0" layoutY="56.0" onKeyPressed="#chercherDemande" prefHeight="43.0" prefWidth="379.0" />
+      <ScrollPane layoutX="310.0" layoutY="184.0" prefHeight="492.0" prefWidth="748.0">
+         <content>
+            <VBox fx:id="associationcontainer" prefWidth="572.0" spacing="10.0">
+               <padding>
+                  <Insets left="10.0" right="15.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <RadioButton fx:id="titre" layoutX="894.0" layoutY="137.0" mnemonicParsing="false" onAction="#triertitre" text="Titre" />
+      <RadioButton fx:id="type" layoutX="958.0" layoutY="137.0" mnemonicParsing="false" onAction="#triertype" text="Type" />
+      <Button fx:id="donation" layoutY="353.0" mnemonicParsing="false" onAction="#toDonations" opacity="0.0" prefHeight="56.0" prefWidth="214.0" text="Button" />
+      <Button fx:id="home" layoutX="1.0" layoutY="296.0" mnemonicParsing="false" onAction="#toHome" opacity="0.0" prefHeight="56.0" prefWidth="214.0" text="Button" />
+      <Button fx:id="don" layoutX="1083.0" layoutY="235.0" mnemonicParsing="false" onAction="#toDon" prefHeight="25.0" prefWidth="28.0" text="Button" />
+      <Button layoutX="54.0" layoutY="418.0" mnemonicParsing="false" onAction="#evenementPushed" opacity="0.0" prefHeight="25.0" prefWidth="123.0" text="Button" />
+      <Button layoutX="51.0" layoutY="476.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="123.0" text="Button" />
+      <Button layoutX="55.0" layoutY="530.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="115.0" text="Button" />
+      <Button layoutX="55.0" layoutY="590.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="132.0" text="Button" />
+   </children>
+</AnchorPane>
