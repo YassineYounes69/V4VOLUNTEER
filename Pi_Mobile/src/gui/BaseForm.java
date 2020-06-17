@@ -81,9 +81,16 @@ public class BaseForm extends Form {
                 FlowLayout.encloseCenterBottom(
                         new Label(res.getImage("haaa.png"), "PictureWhiteBackgrond"))
         ));
-        
-        tb.addMaterialCommandToSideMenu("Demandes de don", FontImage.MATERIAL_UPDATE, e -> new NewsfeedForm(res).show());
+         AffichRef h = new AffichRef(res);
+        tb.addMaterialCommandToSideMenu("Home", FontImage.MATERIAL_UPDATE, e -> new Accueil(res).show());
+
+         tb.addMaterialCommandToSideMenu("Demandes de don", FontImage.MATERIAL_UPDATE, e -> new NewsfeedForm(res).show());
         tb.addMaterialCommandToSideMenu("Evenement", FontImage.MATERIAL_SETTINGS, e -> new EvenementAcceuil(res).show());
         tb.addMaterialCommandToSideMenu("Pérsonnes agées", FontImage.MATERIAL_EXIT_TO_APP, e -> new AgeeForm(res).show());
+         tb.addMaterialCommandToSideMenu("Réfugiés ", FontImage.MATERIAL_UPDATE, e ->h.getF().show());
+         tb.addMaterialCommandToSideMenu("Paramétres ", FontImage.MATERIAL_UPDATE, e -> new SettingsForm(this).show());
+
+        tb.addMaterialCommandToSideMenu("Déconnexion", FontImage.MATERIAL_UPDATE, e -> new homeConnected(res).show());
+//        
     }
 }

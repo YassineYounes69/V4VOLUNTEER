@@ -309,7 +309,7 @@ public class EvenementAcceuil extends Form {
         lparticiper.addPointerPressedListener(ev -> {
             if (lparticiper.getText().toUpperCase().equalsIgnoreCase("PARTICIPER")) {
                 lparticiper.setText("Abondonner");
-                participants.setText(String.valueOf((e.getNbParticipant()+1)-1) + " Participants  ");
+                participants.setText(String.valueOf((e.getNbParticipant() + 1) - 1) + " Participants  ");
 
                 participerStyle.setFgColor(0xf21f1f);
                 FontImage participerImage = FontImage.createMaterial(FontImage.MATERIAL_BOOKMARK, participerStyle);
@@ -330,7 +330,7 @@ public class EvenementAcceuil extends Form {
                 FontImage participerImage = FontImage.createMaterial(FontImage.MATERIAL_BOOKMARK_BORDER, participerStyle);
                 lparticiper.setIcon(participerImage);
                 ps.abandonner(p);
-               participants.setText(String.valueOf(e.getNbParticipant()-1) + " Participants  ");
+                participants.setText(String.valueOf(e.getNbParticipant() - 1) + " Participants  ");
 
                 System.out.println("Abondonné");
 
@@ -510,7 +510,7 @@ public class EvenementAcceuil extends Form {
                 lparticiper.setIcon(participerImage);
                 ps.participer(p);
                 participants.setText(String.valueOf(e.getNbParticipant()) + " Participants  ");
-                 String mailAdmin = "mrejeb114@gmail.com";
+                String mailAdmin = "mrejeb114@gmail.com";
                 String Body = "Bonjour L'équipe V4VOLUNTEER." + "," + "\n" + "Je confirme ma réservation a l'evénement : " + " " + e.getNom() + " " + " qui se déroulera le " + e.getDate() + " à " + e.getLieu() + "." + "\n" + "Amicalement.";
                 Message m = new Message(Body);
                 Display.getInstance().sendMessage(new String[]{mailAdmin}, "V4VOLUNTEER APP", m);
@@ -841,15 +841,16 @@ public class EvenementAcceuil extends Form {
                 FlowLayout.encloseCenterBottom(
                         new Label(res.getImage("profile-pic.jpg"), "PictureWhiteBackgrond"))
         ));
-
-        tb.addMaterialCommandToSideMenu("Accueil ", FontImage.MATERIAL_UPDATE, e -> new HomeForm().show());
+        AffichRef h = new AffichRef(res);
+        tb.addMaterialCommandToSideMenu("Accueil ", FontImage.MATERIAL_UPDATE, e -> new Accueil(res).show());
 
         tb.addMaterialCommandToSideMenu("Evenement ", FontImage.MATERIAL_DATA_USAGE, e -> new EvenementAcceuil(res).show());
-       tb.addMaterialCommandToSideMenu("Personnes agées ", FontImage.MATERIAL_UPDATE, e ->new AgeeForm(res).show());
-         tb.addMaterialCommandToSideMenu("Demande ", FontImage.MATERIAL_UPDATE, e -> new NewsfeedForm(res).show());
-//        tb.addMaterialCommandToSideMenu("Produit ", FontImage.MATERIAL_UPDATE, e -> new ProduitAccueil(res).show());
-//        tb.addMaterialCommandToSideMenu("Magasin ", FontImage.MATERIAL_UPDATE, e -> new MagasinAccueil(res).show());
-//        tb.addMaterialCommandToSideMenu("Annonce ", FontImage.MATERIAL_UPDATE, e -> new AnnonceAccueil(res).show());
+        tb.addMaterialCommandToSideMenu("Personnes agées ", FontImage.MATERIAL_UPDATE, e -> new AgeeForm(res).show());
+        tb.addMaterialCommandToSideMenu("Demande ", FontImage.MATERIAL_UPDATE, e -> new NewsfeedForm(res).show());
+        tb.addMaterialCommandToSideMenu("Réfugiés ", FontImage.MATERIAL_UPDATE, e -> h.getF().show());
+        tb.addMaterialCommandToSideMenu("Paramétres ", FontImage.MATERIAL_UPDATE, e -> new SettingsForm(this).show());
+
+        tb.addMaterialCommandToSideMenu("Déconnexion", FontImage.MATERIAL_UPDATE, e -> new homeConnected(res).show());
 //        
 //        tb.addMaterialCommandToSideMenu("Profile", FontImage.MATERIAL_CONTACTS, e -> new ProfileHome(res).show());
 //        tb.addMaterialCommandToSideMenu("Logout", FontImage.MATERIAL_EXIT_TO_APP, e -> new WalkthruForm(res).show());

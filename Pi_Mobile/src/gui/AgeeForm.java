@@ -33,9 +33,9 @@ Form current;
         setTitle("Home");
         setLayout(BoxLayout.y());
         addSideMenu(res);
-        add(new Label("Choose an option"));
-        Button btnAddTask = new Button("Add Task");
-        Button btnListTasks = new Button("List Tasks");
+        add(new Label("Veuillez choisir une option"));
+        Button btnAddTask = new Button("Ajouter une pérsonne agée");
+        Button btnListTasks = new Button("Liste des pérsonnes agées");
         Button btnStatTasks = new Button("Statistiques");
         
         
@@ -81,14 +81,17 @@ Form current;
                         new Label(res.getImage("profile-pic.jpg"), "PictureWhiteBackgrond"))
         ));
 
-        tb.addMaterialCommandToSideMenu("Accueil ", FontImage.MATERIAL_UPDATE, e -> new HomeForm().show());
+        AffichRef h = new AffichRef(res);
+        tb.addMaterialCommandToSideMenu("Accueil ", FontImage.MATERIAL_UPDATE, e -> new Accueil(res).show());
 
         tb.addMaterialCommandToSideMenu("Evenement ", FontImage.MATERIAL_DATA_USAGE, e -> new EvenementAcceuil(res).show());
-       tb.addMaterialCommandToSideMenu("Personnes agées ", FontImage.MATERIAL_UPDATE, e ->new AgeeForm(res).show());
-         tb.addMaterialCommandToSideMenu("Demande ", FontImage.MATERIAL_UPDATE, e -> new NewsfeedForm(res).show());
-//        tb.addMaterialCommandToSideMenu("Produit ", FontImage.MATERIAL_UPDATE, e -> new ProduitAccueil(res).show());
-//        tb.addMaterialCommandToSideMenu("Magasin ", FontImage.MATERIAL_UPDATE, e -> new MagasinAccueil(res).show());
-//       
+        tb.addMaterialCommandToSideMenu("Personnes agées ", FontImage.MATERIAL_UPDATE, e -> new AgeeForm(res).show());
+        tb.addMaterialCommandToSideMenu("Demande ", FontImage.MATERIAL_UPDATE, e -> new NewsfeedForm(res).show());
+        tb.addMaterialCommandToSideMenu("Réfugiés ", FontImage.MATERIAL_UPDATE, e -> h.getF().show());
+        tb.addMaterialCommandToSideMenu("Paramétres ", FontImage.MATERIAL_UPDATE, e -> new SettingsForm(this).show());
+
+        tb.addMaterialCommandToSideMenu("Déconnexion", FontImage.MATERIAL_UPDATE, e -> new homeConnected(res).show());
+//        
     }
 
 }
