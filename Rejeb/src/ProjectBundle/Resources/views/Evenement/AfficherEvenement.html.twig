@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <!-- events -->
+    <div class="events">
+        <div class="container">
+            <div class="event-grids">
+                <div class="col-md-6 upcoming">
+                    <h3>Evenements disponible</h3>
+                    <div class="family">
+                        <div class="twenty">
+                            <h4>{{ evenement.nbParticipant }}</h4>
+<<<<<<< HEAD
+                           <p> Participants</p>
+=======
+                            <p>Participants</p>
+>>>>>>> de496a788e2b14d8a651b75af972c22c59fe7911
+                        </div>
+                        <div class="sunday">
+                            <h5>{{ evenement.nom }}</h5>
+
+                            <p>createur: {{ evenement.createur }} |{{ evenement.date|date }}</p>
+                            <p>Lieu: {{ evenement.lieu }}</p>
+
+                        </div>
+                        {% set attend=0 %}
+                        {% for r in reservation %}
+                            {% if r.getIdEvenement()==evenement %}
+                                {% set attend=1  %}
+                            {% endif %}
+                        {% endfor %}
+                        {% if attend==0 %}
+                        <div class="mor">
+
+                            <a class="more" href="{{ path('participerEvenement', {'reference': evenement.reference}) }}">Participer</a>
+
+                        </div>
+                        {% endif %}
+                        {% if attend==1 %}
+                        <div class="mor">
+
+                                <a class="more" href="{{ path('abandonnerEvenement', {'reference': evenement.reference}) }}">Abandonner</a>
+
+                        </div>
+                        {% endif %}
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class="col-md-6 keep">
+                    <h3>Description</h3>
+<<<<<<< HEAD
+                    <p>{{ evenement.description }}</p>
+=======
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p>It has survived not only five centuries, but also the leap into electronic typesettingLorem Ipsum is simply dummy text of the printing.</p>
+>>>>>>> de496a788e2b14d8a651b75af972c22c59fe7911
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

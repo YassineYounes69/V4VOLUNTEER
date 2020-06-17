@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="main" prefHeight="590.0" prefWidth="1014.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="donation.Aff_demandeController">
+    <stylesheets>
+        <URL value="@aff_demande.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1147.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/don.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="quantite" layoutX="796.0" layoutY="200.0" prefHeight="425.0" prefWidth="276.0">
+         <children>
+            <Label layoutX="22.0" layoutY="177.0" prefHeight="27.0" prefWidth="160.0" text="Quantité donation">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="confirmer_don" layoutX="144.0" layoutY="227.0" mnemonicParsing="false" text="Faire la donation" />
+            <Button fx:id="fermer_quantite" layoutX="251.0" layoutY="112.0" mnemonicParsing="false" onAction="#fermerQuantite" text="X" />
+            <TextField fx:id="quant" layoutX="196.0" layoutY="177.0" prefHeight="25.0" prefWidth="36.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="modifform" layoutX="742.0" layoutY="243.0" prefHeight="351.0" prefWidth="386.0">
+         <children>
+            <TextField fx:id="titre_demande" layoutX="172.0" layoutY="45.0" prefHeight="34.0" prefWidth="160.0" />
+            <Label layoutX="70.0" layoutY="45.0" text="Titre">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="rechercher" layoutX="275.0" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="Browse" />
+            <TextField fx:id="image_demande" layoutX="177.0" layoutY="244.0" prefHeight="25.0" prefWidth="90.0" />
+            <TextArea fx:id="description_demande" layoutX="170.0" layoutY="95.0" prefHeight="72.0" prefWidth="160.0" />
+            <Label layoutX="70.0" layoutY="242.0" text="Image">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="94.0" text="Description">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="modifierr" layoutX="152.0" layoutY="298.0" mnemonicParsing="false" text="modifier" />
+            <Button fx:id="fermeture" layoutX="311.0" layoutY="2.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="10.0" text="X">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="68.0" layoutY="188.0" text="Type">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="type_demande" layoutX="170.0" layoutY="185.0" prefHeight="34.0" prefWidth="160.0" />
+         </children>
+      </Pane>
+      <ScrollPane layoutX="204.0" layoutY="155.0" opacity="0.0" prefHeight="436.0" prefWidth="521.0">
+         <content>
+            <VBox fx:id="demandecontainer" prefHeight="0.0" prefWidth="507.0" spacing="150.0">
+               <padding>
+                  <Insets left="10.0" right="15.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Button fx:id="rechercher_demande" layoutX="542.0" layoutY="47.0" mnemonicParsing="false" opacity="0.0" prefHeight="49.0" prefWidth="60.0" text="Button" />
+      <TextField fx:id="search_demande" layoutX="694.0" layoutY="53.0" onKeyPressed="#chercherDemande" prefHeight="43.0" prefWidth="379.0" />
+      <ScrollPane layoutX="250.0" layoutY="174.0" prefHeight="492.0" prefWidth="521.0">
+         <content>
+            <VBox fx:id="associationcontainer" prefWidth="572.0" spacing="10.0">
+               <padding>
+                  <Insets left="10.0" right="15.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <ScrollPane fx:id="scroll" layoutX="778.0" layoutY="226.0" prefHeight="371.0" prefWidth="352.0">
+         <content>
+            <VBox fx:id="associationcontainer1" prefWidth="572.0" spacing="10.0">
+               <padding>
+                  <Insets left="10.0" right="15.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <RadioButton fx:id="titre" layoutX="583.0" layoutY="129.0" mnemonicParsing="false" onAction="#triertitre" text="Titre" />
+      <RadioButton fx:id="type" layoutX="647.0" layoutY="129.0" mnemonicParsing="false" onAction="#triertype" text="Type" />
+      <Button fx:id="donation" layoutX="1.0" layoutY="351.0" mnemonicParsing="false" onAction="#toDonations" opacity="0.0" prefHeight="49.0" prefWidth="214.0" text="Button" />
+      <Button fx:id="ajout" layoutX="871.0" layoutY="183.0" mnemonicParsing="false" onAction="#toAdd" prefHeight="25.0" prefWidth="193.0" text="ajouter une demande" />
+      <Button fx:id="back" layoutX="38.0" layoutY="48.0" mnemonicParsing="false" onAction="#toBack" opacity="0.0" prefHeight="124.0" prefWidth="134.0" text="Button" />
+      <Button fx:id="home" layoutX="5.0" layoutY="297.0" mnemonicParsing="false" onAction="#toHome" opacity="0.0" prefHeight="49.0" prefWidth="208.0" text="Button" />
+   </children>
+</AnchorPane>
